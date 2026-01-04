@@ -11,7 +11,8 @@ import requests
 import re
 from config import (
     REASONER_SYSTEM_PROMPT, DISEASE_AGENT_SYSTEM_PROMPT, 
-    COORDINATOR_SYSTEM_PROMPT, MOCK_PRICE_DATA, REMEDIES_FILE
+    COORDINATOR_SYSTEM_PROMPT, MOCK_PRICE_DATA, REMEDIES_FILE,
+    SCHEME_AGENT_SYSTEM_PROMPT, SCHEME_ELIGIBILITY_PROMPT, SCHEMES_FILE
 )
 
 # Set up logging
@@ -69,14 +70,31 @@ class AgriMitraLLM:
             # Fallback reasoning logic
             disease_keywords = ['disease', 'sick', 'infected', 'spots', 'mold', 'wilting', 'yellow', 'blight', 'mildew', 'rust', 'leaf', 'stem', 'root']
             price_keywords = ['price', 'market', 'sell', 'cost', 'value', 'rate', 'mandi']
+            scheme_keywords = ['scheme', 'schemes', 'subsidy', 'subsidies', 'government', 'govt', 'eligible', 'eligibility', 'benefit', 'benefits', 'assistance', 'program', 'programme']
             
             has_disease = any(keyword in user_lower for keyword in disease_keywords)
             has_price = any(keyword in user_lower for keyword in price_keywords)
+            has_scheme = any(keyword in user_lower for keyword in scheme_keywords)
             
             crop = None
             for crop_name in MOCK_PRICE_DATA.keys():
                 if crop_name in user_lower:
                     crop = crop_name
+                    break
+            
+            # Extract state if mentioned
+            states = [
+                "andhra pradesh", "arunachal pradesh", "assam", "bihar", "chhattisgarh",
+                "goa", "gujarat", "haryana", "himachal pradesh", "jharkhand", "karnataka",
+                "kerala", "madhya pradesh", "maharashtra", "manipur", "meghalaya", "mizoram",
+                "nagaland", "odisha", "punjab", "rajasthan", "sikkim", "tamil nadu",
+                "telangana", "tripura", "uttar pradesh", "uttarakhand", "west bengal",
+                "delhi", "jammu and kashmir", "ladakh", "puducherry"
+            ]
+            state = None
+            for s in states:
+                if s in user_lower:
+                    state = s.title()
                     break
             
             intent = []
@@ -90,11 +108,16 @@ class AgriMitraLLM:
                 intent.append("market")
                 agents.append("price_agent")
             
+            if has_scheme:
+                intent.append("scheme")
+                agents.append("scheme_agent")
+            
             # If neither disease nor price signals appear and no known crop found, treat as out_of_scope
             if not intent and crop is None:
                 return json.dumps({
                     "intent": ["out_of_scope"],
                     "crop": None,
+                    "state": None,
                     "agents_to_trigger": []
                 })
             
@@ -105,6 +128,7 @@ class AgriMitraLLM:
             return json.dumps({
                 "intent": intent,
                 "crop": crop,
+                "state": state,
                 "agents_to_trigger": agents
             })
         
@@ -116,6 +140,17 @@ class AgriMitraLLM:
                 "confidence": "low",
                 "needs_remedy": True,
                 "explanation": "Running in demo mode - please provide more specific symptoms for accurate diagnosis"
+            })
+        
+        # Check if this is the scheme agent system prompt
+        elif "agricultural scheme eligibility expert" in system_prompt:
+            # Fallback scheme agent response
+            return json.dumps({
+                "state": "",
+                "category": "",
+                "sub_category": "",
+                "scheme_name": "",
+                "needs_subcategories": False
             })
         
         # Check if this is the coordinator system prompt
@@ -231,6 +266,222 @@ def find_fertilizer_shops(lat: float, lon: float, radius_m: int = 5000) -> str:
         logger.error(f"Overpass error: {e}")
         return json.dumps({"error": f"Overpass query failed: {e}"})
 
+def _truncate_text(text: str, max_chars: int = 200) -> str:
+    """Helper function to truncate text to max_chars"""
+    if not text:
+        return ""
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars].rsplit(' ', 1)[0] + "..."
+
+def _truncate_list(items: list, max_items: int = 3, max_chars_per_item: int = 200) -> list:
+    """Helper function to truncate list items"""
+    if not items:
+        return []
+    truncated = []
+    for item in items[:max_items]:
+        if isinstance(item, str):
+            truncated.append(_truncate_text(item, max_chars_per_item))
+        else:
+            truncated.append(str(item)[:max_chars_per_item])
+    return truncated
+
+@tool
+def get_subcategories_tool(state: str = "") -> str:
+    """Tool to extract all unique sub-categories from schemes for a given state.
+    
+    Args:
+        state: State name to filter schemes. If empty string "", returns sub-categories from central schemes only.
+              If state is provided, returns sub-categories from both state schemes and central schemes.
+    
+    Returns:
+        JSON string with unique sub-categories and their counts
+    """
+    try:
+        with open(SCHEMES_FILE, 'r', encoding='utf-8') as f:
+            all_schemes = json.load(f)
+        
+        subcategory_counts = {}
+        
+        for scheme in all_schemes:
+            scheme_state = scheme.get("state", "")
+            scheme_sub_categories = scheme.get("sub_category", [])
+            
+            # Filter by state: if state is empty string, it's a central scheme
+            if state:
+                # User specified a state - include schemes for that state OR central schemes
+                if scheme_state.lower() != state.lower() and scheme_state != "":
+                    continue
+            else:
+                # No state specified - show all schemes (both state and central)
+                pass
+            
+            # Process each sub-category
+            for sub_cat in scheme_sub_categories:
+                if not sub_cat or sub_cat.strip() == "":
+                    continue
+                
+                sub_cat_lower = sub_cat.lower()
+                
+                if sub_cat_lower not in subcategory_counts:
+                    subcategory_counts[sub_cat_lower] = {
+                        "name": sub_cat,
+                        "count": 0,
+                        "scheme_types": set()
+                    }
+                
+                subcategory_counts[sub_cat_lower]["count"] += 1
+                
+                # Track scheme types
+                if scheme_state == "":
+                    subcategory_counts[sub_cat_lower]["scheme_types"].add("Central")
+                else:
+                    subcategory_counts[sub_cat_lower]["scheme_types"].add("State")
+        
+        # Convert to list format and sort by count (descending)
+        subcategories_list = []
+        for sub_cat_data in subcategory_counts.values():
+            subcategories_list.append({
+                "name": sub_cat_data["name"],
+                "count": sub_cat_data["count"],
+                "scheme_types": sorted(list(sub_cat_data["scheme_types"]))
+            })
+        
+        # Sort by count descending
+        subcategories_list.sort(key=lambda x: x["count"], reverse=True)
+        
+        return json.dumps({
+            "state": state if state else "All",
+            "total_subcategories": len(subcategories_list),
+            "sub_categories": subcategories_list
+        }, indent=2, ensure_ascii=False)
+        
+    except FileNotFoundError:
+        logger.error(f"Schemes file not found: {SCHEMES_FILE}")
+        return json.dumps({"error": f"Schemes file not found: {SCHEMES_FILE}"})
+    except Exception as e:
+        logger.error(f"Subcategories tool error: {e}")
+        return json.dumps({"error": f"Failed to load schemes: {e}"})
+
+@tool
+def scheme_tool(state: str = "", category: str = "", scheme_name: str = "", sub_category: str = "") -> str:
+    """Tool to search and filter agricultural schemes from agri_schemes_cleaned.json.
+    
+    Args:
+        state: State name to filter schemes. If empty string "", returns central schemes.
+        category: Optional category filter (e.g., "Agriculture,Rural & Environment")
+        scheme_name: Optional scheme name to search for (partial match)
+        sub_category: Optional sub-category filter (e.g., "Animal husbandry")
+    
+    Returns:
+        JSON string with matching schemes and their eligibility information (limited to top 3)
+    """
+    try:
+        with open(SCHEMES_FILE, 'r', encoding='utf-8') as f:
+            all_schemes = json.load(f)
+        
+        filtered_schemes = []
+        
+        for scheme in all_schemes:
+            scheme_state = scheme.get("state", "")
+            
+            # Filter by state: if state is empty string, it's a central scheme
+            if state:
+                # User specified a state - show schemes for that state OR central schemes
+                if scheme_state.lower() != state.lower() and scheme_state != "":
+                    continue
+            else:
+                # No state specified - show all schemes (both state and central)
+                pass
+            
+            # Filter by category if provided
+            if category:
+                scheme_categories = scheme.get("category", [])
+                if not any(cat.lower() == category.lower() for cat in scheme_categories):
+                    continue
+            
+            # Filter by sub_category if provided
+            if sub_category:
+                scheme_sub_categories = scheme.get("sub_category", [])
+                sub_category_lower = sub_category.lower()
+                # Try exact match first
+                exact_match = any(sub_cat.lower() == sub_category_lower for sub_cat in scheme_sub_categories)
+                # If no exact match, try partial match (search term in scheme sub-category or vice versa)
+                partial_match = False
+                if not exact_match:
+                    for sub_cat in scheme_sub_categories:
+                        sub_cat_lower = sub_cat.lower()
+                        # Check if search term is contained in scheme sub-category
+                        if sub_category_lower in sub_cat_lower:
+                            partial_match = True
+                            break
+                        # Check if scheme sub-category is contained in search term
+                        if sub_cat_lower in sub_category_lower:
+                            partial_match = True
+                            break
+                        # Check if significant words match (for cases like "Agricultural Inputs" vs "Agricultural Inputs- seeds, fertilizer etc.")
+                        search_words = [w for w in sub_category_lower.split() if len(w) > 3]
+                        scheme_words = [w for w in sub_cat_lower.split() if len(w) > 3]
+                        if search_words and scheme_words:
+                            # If all significant words from search are in scheme sub-category
+                            if all(word in sub_cat_lower for word in search_words):
+                                partial_match = True
+                                break
+                
+                if not exact_match and not partial_match:
+                    continue
+            
+            # Filter by scheme name if provided
+            if scheme_name:
+                name = scheme.get("scheme_name", "").lower()
+                if scheme_name.lower() not in name:
+                    continue
+            
+            # Get eligibility and benefits for truncation
+            eligibility = scheme.get("eligibility", [])
+            benefits = scheme.get("benefits", [])
+            
+            # Truncate eligibility (keep first 3 items, max 200 chars each)
+            eligibility_truncated = _truncate_list(eligibility, max_items=3, max_chars_per_item=200)
+            
+            # Truncate benefits (keep first 2 items, max 200 chars each)
+            benefits_truncated = _truncate_list(benefits, max_items=2, max_chars_per_item=200)
+            
+            # Create eligibility summary (first item or first 200 chars)
+            eligibility_summary = ""
+            if eligibility:
+                first_eligibility = eligibility[0] if isinstance(eligibility, list) else str(eligibility)
+                eligibility_summary = _truncate_text(str(first_eligibility), max_chars=200)
+            
+            # Include scheme in results with truncated data
+            filtered_schemes.append({
+                "scheme_name": scheme.get("scheme_name", ""),
+                "short_name": scheme.get("short_name", ""),
+                "state": scheme_state if scheme_state else "Central",
+                "scheme_type": "Central" if scheme_state == "" else "State",
+                "scheme_for": scheme.get("scheme_for", ""),
+                "category": scheme.get("category", []),
+                "sub_category": scheme.get("sub_category", []),
+                "brief_description": _truncate_text(scheme.get("brief_description", ""), max_chars=300),
+                "eligibility": eligibility_truncated,
+                "eligibility_summary": eligibility_summary,
+                "benefits": benefits_truncated,
+                "references": scheme.get("references", [])
+            })
+        
+        # Limit to top 3 schemes
+        return json.dumps({
+            "count": len(filtered_schemes),
+            "schemes": filtered_schemes[:3]  # Limit to top 3 results
+        }, indent=2, ensure_ascii=False)
+        
+    except FileNotFoundError:
+        logger.error(f"Schemes file not found: {SCHEMES_FILE}")
+        return json.dumps({"error": f"Schemes file not found: {SCHEMES_FILE}"})
+    except Exception as e:
+        logger.error(f"Scheme tool error: {e}")
+        return json.dumps({"error": f"Failed to load schemes: {e}"})
+
 class ReasonerNode:
     """Reasoner Node - Analyzes user input and determines which agents to trigger"""
     
@@ -278,14 +529,31 @@ class ReasonerNode:
         # Simple keyword-based reasoning
         disease_keywords = ['disease', 'sick', 'infected', 'spots', 'mold', 'wilting', 'yellow']
         price_keywords = ['price', 'market', 'sell', 'cost', 'value']
+        scheme_keywords = ['scheme', 'schemes', 'subsidy', 'subsidies', 'government', 'govt', 'eligible', 'eligibility', 'benefit', 'benefits', 'assistance', 'program', 'programme']
         
         has_disease = any(keyword in user_lower for keyword in disease_keywords)
         has_price = any(keyword in user_lower for keyword in price_keywords)
+        has_scheme = any(keyword in user_lower for keyword in scheme_keywords)
         
         crop = None
         for crop_name in MOCK_PRICE_DATA.keys():
             if crop_name in user_lower:
                 crop = crop_name
+                break
+        
+        # Extract state if mentioned
+        states = [
+            "andhra pradesh", "arunachal pradesh", "assam", "bihar", "chhattisgarh",
+            "goa", "gujarat", "haryana", "himachal pradesh", "jharkhand", "karnataka",
+            "kerala", "madhya pradesh", "maharashtra", "manipur", "meghalaya", "mizoram",
+            "nagaland", "odisha", "punjab", "rajasthan", "sikkim", "tamil nadu",
+            "telangana", "tripura", "uttar pradesh", "uttarakhand", "west bengal",
+            "delhi", "jammu and kashmir", "ladakh", "puducherry"
+        ]
+        state = None
+        for s in states:
+            if s in user_lower:
+                state = s.title()
                 break
         
         intent = []
@@ -299,6 +567,10 @@ class ReasonerNode:
             intent.append("market")
             agents.append("price_agent")
         
+        if has_scheme:
+            intent.append("scheme")
+            agents.append("scheme_agent")
+        
         if not intent:  # Default to disease if unclear
             intent = ["disease"]
             agents = ["disease_agent"]
@@ -306,6 +578,7 @@ class ReasonerNode:
         return {
             "intent": intent,
             "crop": crop,
+            "state": state,
             "agents_to_trigger": agents
         }
 
@@ -436,6 +709,284 @@ class PriceAgentNode:
                 "agent": "price_agent"
             }
 
+class SchemeAgentNode:
+    """Scheme Agent - Checks eligibility and finds relevant agricultural schemes"""
+    
+    def __init__(self):
+        self.llm = AgriMitraLLM()
+        self._subcategories_cache = None
+    
+    def _load_all_subcategories(self) -> List[str]:
+        """Load all unique sub-categories from schemes file for better matching"""
+        if self._subcategories_cache is not None:
+            return self._subcategories_cache
+        
+        try:
+            with open(SCHEMES_FILE, 'r', encoding='utf-8') as f:
+                all_schemes = json.load(f)
+            
+            subcategories_set = set()
+            for scheme in all_schemes:
+                sub_categories = scheme.get("sub_category", [])
+                for sub_cat in sub_categories:
+                    if sub_cat and sub_cat.strip():
+                        subcategories_set.add(sub_cat.strip())
+            
+            self._subcategories_cache = sorted(list(subcategories_set))
+            logger.info(f"Loaded {len(self._subcategories_cache)} unique sub-categories")
+            return self._subcategories_cache
+        except Exception as e:
+            logger.error(f"Error loading sub-categories: {e}")
+            return []
+    
+    def process(self, user_input: str, state: Optional[str] = None, category: Optional[str] = None) -> Dict[str, Any]:
+        """Process scheme eligibility check request"""
+        logger.info(f"SchemeAgent processing: {user_input}")
+        
+        try:
+            # Use LLM to extract state, category, sub_category from user input
+            context = f"User query: {user_input}"
+            if state:
+                context += f"\nUser's state: {state}"
+            
+            response = self.llm.chat(SCHEME_AGENT_SYSTEM_PROMPT, context)
+            
+            # Parse LLM response
+            try:
+                parsed_response = json.loads(response)
+                search_state = parsed_response.get("state", state or "")
+                search_category = parsed_response.get("category", category or "")
+                search_sub_category = parsed_response.get("sub_category", "")
+                search_scheme_name = parsed_response.get("scheme_name", "")
+                needs_subcategories = parsed_response.get("needs_subcategories", False)
+            except json.JSONDecodeError:
+                logger.warning("Failed to parse LLM response, using fallback logic")
+                search_state = state or self._extract_state_from_input(user_input)
+                search_category = category or ""
+                search_sub_category = self._extract_subcategory_from_input(user_input)
+                search_scheme_name = ""
+                # If state is specified but no sub-category, show sub-categories
+                needs_subcategories = bool(search_state and not search_sub_category)
+            
+            # If LLM didn't extract sub-category, try improved extraction
+            if not search_sub_category:
+                search_sub_category = self._extract_subcategory_from_input(user_input)
+            
+            # Check if user explicitly asks for sub-categories or state specified without sub-category
+            user_lower = user_input.lower()
+            explicit_subcategory_request = any(keyword in user_lower for keyword in [
+                "list of", "show categories", "what categories", "available categories",
+                "sub-categories", "subcategories", "all categories", "options"
+            ])
+            
+            # If state is specified but no sub-category found, return sub-categories list
+            if (explicit_subcategory_request or needs_subcategories) and search_state and not search_sub_category:
+                logger.info("Returning sub-categories list for state: " + search_state)
+                subcategories_result = get_subcategories_tool.invoke({"state": search_state})
+                subcategories_info = json.loads(subcategories_result)
+                
+                return {
+                    "subcategories_info": subcategories_info,
+                    "search_params": {
+                        "state": search_state,
+                        "category": search_category
+                    },
+                    "agent": "scheme_agent",
+                    "response_type": "subcategories"
+                }
+            
+            # If sub-category is specified, get schemes filtered by state + sub-category
+            if search_sub_category:
+                logger.info(f"Searching schemes for state: {search_state}, sub-category: {search_sub_category}")
+                scheme_result = scheme_tool.invoke({
+                    "state": search_state,
+                    "category": search_category,
+                    "sub_category": search_sub_category,
+                    "scheme_name": search_scheme_name
+                })
+                scheme_info = json.loads(scheme_result)
+                
+                # Generate eligibility questions based on shortlisted schemes
+                eligibility_questions = []
+                if scheme_info.get("schemes") and len(scheme_info["schemes"]) > 0:
+                    eligibility_questions = self.generate_eligibility_questions(
+                        user_input, 
+                        scheme_info["schemes"]
+                    )
+                
+                return {
+                    "scheme_info": scheme_info,
+                    "eligibility_questions": eligibility_questions,
+                    "search_params": {
+                        "state": search_state,
+                        "category": search_category,
+                        "sub_category": search_sub_category,
+                        "scheme_name": search_scheme_name
+                    },
+                    "agent": "scheme_agent",
+                    "response_type": "schemes"
+                }
+            else:
+                # No sub-category and no state - return all schemes or error
+                return {
+                    "scheme_info": {"error": "Please specify a state or sub-category"},
+                    "agent": "scheme_agent"
+                }
+            
+        except Exception as e:
+            logger.error(f"SchemeAgent error: {e}")
+            return {
+                "scheme_info": {"error": str(e)},
+                "agent": "scheme_agent"
+            }
+    
+    def generate_eligibility_questions(self, user_query: str, schemes: List[Dict[str, Any]]) -> List[str]:
+        """Generate eligibility questions based on scheme eligibility criteria"""
+        try:
+            eligibility_criteria = []
+            for scheme in schemes:
+                scheme_name = scheme.get("scheme_name", "")
+                eligibility = scheme.get("eligibility", [])
+                eligibility_summary = scheme.get("eligibility_summary", "")
+                
+                if eligibility_summary:
+                    eligibility_criteria.append(f"Scheme: {scheme_name}\nCriteria: {eligibility_summary}")
+                elif eligibility:
+                    criteria_text = "\n".join(eligibility[:3])
+                    eligibility_criteria.append(f"Scheme: {scheme_name}\nCriteria: {criteria_text}")
+            
+            if not eligibility_criteria:
+                return []
+            
+            context = f"User query: {user_query}\n\n"
+            context += "Eligibility criteria from schemes:\n"
+            context += "\n\n".join(eligibility_criteria)
+            context += "\n\nGenerate 3-5 key eligibility questions that will help determine if the user qualifies for these schemes."
+            
+            response = self.llm.chat(SCHEME_ELIGIBILITY_PROMPT, context)
+            
+            # Try to parse as JSON first
+            try:
+                parsed = json.loads(response)
+                if isinstance(parsed, list):
+                    return parsed
+                elif isinstance(parsed, dict) and "questions" in parsed:
+                    return parsed["questions"]
+            except json.JSONDecodeError:
+                pass
+            
+            # Extract questions from text
+            questions = []
+            lines = response.split('\n')
+            for line in lines:
+                line = line.strip()
+                line = re.sub(r'^[\d\.\-\*\)]\s*', '', line)
+                if line and len(line) > 10 and '?' in line:
+                    questions.append(line)
+            
+            return questions[:5]
+            
+        except Exception as e:
+            logger.error(f"Error generating eligibility questions: {e}")
+            return []
+    
+    def _extract_state_from_input(self, user_input: str) -> str:
+        """Extract state from user input"""
+        states = [
+            "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+            "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+            "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+            "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+            "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
+            "Delhi", "Jammu and Kashmir", "Ladakh", "Puducherry"
+        ]
+        
+        user_lower = user_input.lower()
+        for state in states:
+            if state.lower() in user_lower:
+                return state
+        
+        return ""
+    
+    def _extract_subcategory_from_input(self, user_input: str) -> str:
+        """Extract sub-category from user input"""
+        user_lower = user_input.lower()
+        all_subcategories = self._load_all_subcategories()
+        
+        # First, try exact phrase match (prioritize longer/more specific matches)
+        # Sort by length descending to match more specific sub-categories first
+        sorted_subcategories = sorted(all_subcategories, key=len, reverse=True)
+        for sub_cat in sorted_subcategories:
+            sub_cat_lower = sub_cat.lower()
+            # Check if the entire sub-category phrase is in the user input
+            if sub_cat_lower in user_lower:
+                logger.info(f"Found exact sub-category match: {sub_cat}")
+                return sub_cat
+        
+        # Second, try word-by-word match (all words must be present)
+        best_exact_match = ""
+        best_exact_score = 0
+        for sub_cat in sorted_subcategories:
+            sub_cat_words = [w for w in sub_cat.lower().split() if len(w) > 2]  # Words longer than 2 chars
+            if not sub_cat_words:
+                continue
+            # Check if all significant words are present
+            all_words_present = all(word in user_lower for word in sub_cat_words)
+            if all_words_present:
+                score = len(sub_cat_words)  # Prefer matches with more words (more specific)
+                if score > best_exact_score:
+                    best_exact_match = sub_cat
+                    best_exact_score = score
+        
+        if best_exact_match:
+            logger.info(f"Found word-by-word sub-category match: {best_exact_match}")
+            return best_exact_match
+        
+        # Third, try partial match (50%+ words match)
+        best_match = ""
+        best_score = 0
+        for sub_cat in sorted_subcategories:
+            sub_cat_words = [w for w in sub_cat.lower().split() if len(w) > 3]
+            if not sub_cat_words:
+                continue
+            matches = sum(1 for word in sub_cat_words if word in user_lower)
+            score = matches / len(sub_cat_words)
+            if score > 0.5 and score > best_score:
+                best_match = sub_cat
+                best_score = score
+        
+        if best_match:
+            logger.info(f"Found partial sub-category match: {best_match} (score: {best_score:.2f})")
+            return best_match
+        
+        # Fourth, keyword mapping (for common terms)
+        keyword_mapping = {
+            "soil health": "Soil health",
+            "soil": "Soil health",
+            "animal": "Animal husbandry", "husbandry": "Animal husbandry",
+            "dairy": "Animal husbandry", "poultry": "Animal husbandry",
+            "livestock": "Animal husbandry",
+            "financial": "Financial assistance", "loan": "Financial assistance",
+            "subsidy": "Financial assistance", "fishing": "Fishing and hunting",
+            "fisheries": "Fishing and hunting",
+            "seeds": "Agricultural Inputs- seeds, fertilizer etc.",
+            "fertilizer": "Agricultural Inputs- seeds, fertilizer etc.",
+            "fertiliser": "Agricultural Inputs- seeds, fertilizer etc.",
+            "insurance": "Crop insurance", "irrigation": "Irrigation",
+            "organic": "Organic farming", "compost": "Soil health",
+            "vermicompost": "Soil health", "vermi-compost": "Soil health"
+        }
+        
+        # Check keyword mapping (prioritize longer keywords first)
+        for keyword in sorted(keyword_mapping.keys(), key=len, reverse=True):
+            if keyword in user_lower:
+                sub_cat = keyword_mapping[keyword]
+                if sub_cat in all_subcategories:
+                    logger.info(f"Found sub-category via keyword mapping: {sub_cat} (keyword: {keyword})")
+                    return sub_cat
+        
+        return ""
+
 class CoordinatorNode:
     """Coordinator Node - Synthesizes outputs from all agents"""
     
@@ -495,3 +1046,4 @@ class CoordinatorNode:
                 "agent_outputs": agent_outputs,
                 "agent": "coordinator"
             }
+

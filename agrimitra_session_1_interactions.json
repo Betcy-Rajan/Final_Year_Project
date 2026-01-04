@@ -1,93 +1,42 @@
 [
   {
-    "user_input": "My tomato plants have yellow spots on leaves",
-    "final_response": "**What\u2019s happening?**  \nYour tomatoes are showing the classic signs of **Tomato Yellow Leaf Spot** caused by *Pseudomonas syringae pv. tomato*. The disease starts as small, water\u2011soaked yellow spots that can merge into larger lesions, often spreading quickly if conditions are right (high humidity, poor airflow, or wet foliage).\n\n---\n\n## Quick\u2011Start Action Plan (24\u201348\u202fh)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| **1. Inspect & Prune** | Remove all infected leaves and any that are turning yellow or brown. Cut at least 1\u202fin. below the healthy tissue. | Cuts off the bacteria\u2019s food source and reduces inoculum. |\n| **2. Improve Air Circulation** | Thin out crowded plants, prune lower leaves, and space rows 18\u201324\u202fin. apart. | Dry leaves faster \u2192 less favorable for bacterial growth. |\n| **3. Water Wisely** | Water at the soil level in the morning; avoid overhead sprinklers. | Keeps foliage dry and limits splash\u2011dispersal of bacteria. |\n| **4. Sanitize Tools** | Disinfect pruning shears with 10\u202f% bleach or 70\u202f% alcohol after each cut. | Prevents spreading the pathogen between plants. |\n| **5. Apply a Copper\u2011Based Bactericide** | If available, mix 1\u202ftsp of copper sulfate (or 1\u202foz of copper oxychloride) in 1\u202fqt of water and spray until foliage is wet. Repeat every 7\u201310\u202fdays. | Copper is the most common, inexpensive option for bacterial leaf spot. |\n| **6. Use Resistant Varieties** | For future plantings, choose cultivars labeled \u201cbacterial leaf spot resistant\u201d (e.g., \u2018Roma\u2019, \u2018San Marzano\u2019, or newer hybrids). | Genetic resistance is the most sustainable long\u2011term solution. |\n| **7. Monitor & Record** | Check plants daily for new spots. Keep a simple log (date, symptoms, treatment). | Helps you spot trends and adjust tactics early. |\n\n---\n\n## If You Need More Help\n\n- **Local Extension or Agronomist** \u2013 They can confirm the diagnosis and recommend region\u2011specific bactericides or resistant varieties.\n- **Community Forums** \u2013 Share photos on local farming groups or online forums; often other growers have practical tips for your climate.\n\n---\n\n## Fertilizer Shop Note\n\nThe disease agent didn\u2019t return any nearby fertilizer shops. If you need a copper product or other supplies, try:\n\n1. Expanding your search radius (e.g., 10\u202fmi instead of 5\u202fmi).  \n2. Checking larger garden centers or agricultural supply stores in nearby towns.  \n3. Calling local nurseries to ask if they carry copper bactericides or resistant tomato seeds.\n\n---\n\n### Bottom Line\n\nAct fast\u2014remove infected leaves, improve airflow, and apply a copper spray. Keep the plants dry and monitor closely. If the problem persists or worsens, reach out to a local expert for a tailored solution. Good luck, and your tomatoes will thank you for the early intervention!",
-    "timestamp": "2025-10-16T06:55:43.968565",
+    "user_input": "Govt scheme",
+    "final_response": "I\u2019m happy to help you find the right government schemes for your farm.  \nBecause I don\u2019t yet have the specific details from the scheme\u2011agent, I\u2019ll give you a quick snapshot of the most common schemes that farmers in India can usually access, and then ask a few questions so we can narrow it down to the ones that apply to you.\n\n---\n\n## Quick Overview of Popular Central Schemes for Farmers\n\n| Scheme | What it Covers | Typical Eligibility |\n|--------|----------------|---------------------|\n| **Pradhan Mantri Fasal Bima Yojana (PMFBY)** | Crop insurance for most major crops (wheat, rice, pulses, oilseeds, etc.) | Landholders, sharecroppers, and contract farmers with a minimum of 0.5\u202fha of land |\n| **Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)** | Direct income support of \u20b96000 per year (\u20b92000 per quarter) | Farmers owning or leasing land of any size, with a minimum of 1\u202fha of land (or 0.5\u202fha for marginal farmers) |\n| **Pradhan Mantri Krishi Sinchai Yojana (PMKSY)** | Irrigation development and water\u2011saving technologies | Farmers with irrigation facilities or those who can install drip/soaker systems |\n| **National Agriculture Insurance Scheme (NAIS)** | Insurance for crops, livestock, and fisheries | Farmers with land or livestock assets |\n| **Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)** | Employment generation for rural households | Rural households (including farmers) that meet the 100\u202fha land\u2011holding limit |\n\n> **Tip:** Most of these schemes are *central* and apply to all states, but some states run additional *state\u2011specific* schemes (e.g., crop\u2011specific subsidies, credit guarantees, or local extension services).  \n\n---\n\n## What We Need to Pinpoint the Best Schemes for You\n\n1. **State / Region** \u2013 Some schemes have state\u2011level variations or additional benefits.  \n2. **Primary Crop(s)** \u2013 Certain schemes target specific crops (e.g., sugarcane, cotton, horticulture).  \n3. **Landholding Size** \u2013 Determines eligibility for many schemes (e.g., PM-KISAN, NAIS).  \n4. **Current Challenges** \u2013 Are you looking for crop insurance, financial support, irrigation, or market access?  \n\nOnce you share this information, I can pull the exact scheme list (including central vs. state schemes, eligibility criteria, and links) and give you a step\u2011by\u2011step action plan.\n\n---\n\n### Next Steps\n\n- **Reply with**:  \n  - Your state or district  \n  - The main crop(s) you grow  \n  - Your landholding size (in hectares or acres)  \n  - Any specific issue you\u2019re facing (e.g., crop loss, lack of irrigation, need for credit)\n\n- **I\u2019ll then**:  \n  - List the top 3 schemes that match your profile  \n  - Provide eligibility questions and benefits  \n  - Offer links to official portals or local offices where you can apply\n\nFeel free to add any other details you think might help (e.g., whether you\u2019re a smallholder, a sharecropper, or a commercial farmer). Looking forward to helping you secure the support you deserve!",
+    "timestamp": "2026-01-04T14:22:18.962130",
     "execution_log": [
       {
         "node": "reasoner",
-        "input": "My tomato plants have yellow spots on leaves",
+        "input": "Govt scheme",
         "output": {
           "reasoner_output": {
             "intent": [
-              "disease"
+              "scheme"
             ],
-            "crop": "tomato",
+            "crop": null,
+            "state": null,
             "agents_to_trigger": [
-              "disease_agent"
+              "scheme_agent"
             ]
           },
-          "user_input": "My tomato plants have yellow spots on leaves",
+          "user_input": "Govt scheme",
           "next_nodes": [
-            "disease_agent"
+            "scheme_agent"
           ]
         },
-        "timestamp": "2025-10-16T06:55:41.751162"
-      },
-      {
-        "node": "disease_agent",
-        "input": {
-          "user_input": "My tomato plants have yellow spots on leaves",
-          "crop": "tomato"
-        },
-        "output": {
-          "disease_diagnosis": {
-            "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-            "confidence": "medium",
-            "needs_remedy": true,
-            "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
-          },
-          "remedy_info": {
-            "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-            "suggestion": "Please consult with a local agricultural expert"
-          },
-          "shops_info": null,
-          "agent": "disease_agent"
-        },
-        "timestamp": "2025-10-16T06:55:42.352834"
+        "timestamp": "2026-01-04T14:22:17.022643"
       },
       {
         "node": "coordinator",
         "input": {
-          "user_input": "My tomato plants have yellow spots on leaves",
-          "agent_outputs": [
-            {
-              "disease_diagnosis": {
-                "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "confidence": "medium",
-                "needs_remedy": true,
-                "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
-              },
-              "remedy_info": {
-                "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "suggestion": "Please consult with a local agricultural expert"
-              },
-              "shops_info": null,
-              "agent": "disease_agent"
-            }
-          ]
+          "user_input": "Govt scheme",
+          "agent_outputs": []
         },
         "output": {
-          "final_response": "**What\u2019s happening?**  \nYour tomatoes are showing the classic signs of **Tomato Yellow Leaf Spot** caused by *Pseudomonas syringae pv. tomato*. The disease starts as small, water\u2011soaked yellow spots that can merge into larger lesions, often spreading quickly if conditions are right (high humidity, poor airflow, or wet foliage).\n\n---\n\n## Quick\u2011Start Action Plan (24\u201348\u202fh)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| **1. Inspect & Prune** | Remove all infected leaves and any that are turning yellow or brown. Cut at least 1\u202fin. below the healthy tissue. | Cuts off the bacteria\u2019s food source and reduces inoculum. |\n| **2. Improve Air Circulation** | Thin out crowded plants, prune lower leaves, and space rows 18\u201324\u202fin. apart. | Dry leaves faster \u2192 less favorable for bacterial growth. |\n| **3. Water Wisely** | Water at the soil level in the morning; avoid overhead sprinklers. | Keeps foliage dry and limits splash\u2011dispersal of bacteria. |\n| **4. Sanitize Tools** | Disinfect pruning shears with 10\u202f% bleach or 70\u202f% alcohol after each cut. | Prevents spreading the pathogen between plants. |\n| **5. Apply a Copper\u2011Based Bactericide** | If available, mix 1\u202ftsp of copper sulfate (or 1\u202foz of copper oxychloride) in 1\u202fqt of water and spray until foliage is wet. Repeat every 7\u201310\u202fdays. | Copper is the most common, inexpensive option for bacterial leaf spot. |\n| **6. Use Resistant Varieties** | For future plantings, choose cultivars labeled \u201cbacterial leaf spot resistant\u201d (e.g., \u2018Roma\u2019, \u2018San Marzano\u2019, or newer hybrids). | Genetic resistance is the most sustainable long\u2011term solution. |\n| **7. Monitor & Record** | Check plants daily for new spots. Keep a simple log (date, symptoms, treatment). | Helps you spot trends and adjust tactics early. |\n\n---\n\n## If You Need More Help\n\n- **Local Extension or Agronomist** \u2013 They can confirm the diagnosis and recommend region\u2011specific bactericides or resistant varieties.\n- **Community Forums** \u2013 Share photos on local farming groups or online forums; often other growers have practical tips for your climate.\n\n---\n\n## Fertilizer Shop Note\n\nThe disease agent didn\u2019t return any nearby fertilizer shops. If you need a copper product or other supplies, try:\n\n1. Expanding your search radius (e.g., 10\u202fmi instead of 5\u202fmi).  \n2. Checking larger garden centers or agricultural supply stores in nearby towns.  \n3. Calling local nurseries to ask if they carry copper bactericides or resistant tomato seeds.\n\n---\n\n### Bottom Line\n\nAct fast\u2014remove infected leaves, improve airflow, and apply a copper spray. Keep the plants dry and monitor closely. If the problem persists or worsens, reach out to a local expert for a tailored solution. Good luck, and your tomatoes will thank you for the early intervention!",
-          "agent_outputs": [
-            {
-              "disease_diagnosis": {
-                "disease": "Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "confidence": "medium",
-                "needs_remedy": true,
-                "explanation": "Yellow, water\u2011soaked spots that may coalesce into larger lesions are characteristic of Tomato Yellow Leaf Spot, a bacterial disease common in tomatoes. Early detection and management (cultural practices, resistant varieties, or bactericides) are recommended to prevent spread."
-              },
-              "remedy_info": {
-                "error": "No remedy found for disease: Tomato Yellow Leaf Spot (Pseudomonas syringae pv. tomato)",
-                "suggestion": "Please consult with a local agricultural expert"
-              },
-              "shops_info": null,
-              "agent": "disease_agent"
-            }
-          ],
+          "final_response": "I\u2019m happy to help you find the right government schemes for your farm.  \nBecause I don\u2019t yet have the specific details from the scheme\u2011agent, I\u2019ll give you a quick snapshot of the most common schemes that farmers in India can usually access, and then ask a few questions so we can narrow it down to the ones that apply to you.\n\n---\n\n## Quick Overview of Popular Central Schemes for Farmers\n\n| Scheme | What it Covers | Typical Eligibility |\n|--------|----------------|---------------------|\n| **Pradhan Mantri Fasal Bima Yojana (PMFBY)** | Crop insurance for most major crops (wheat, rice, pulses, oilseeds, etc.) | Landholders, sharecroppers, and contract farmers with a minimum of 0.5\u202fha of land |\n| **Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)** | Direct income support of \u20b96000 per year (\u20b92000 per quarter) | Farmers owning or leasing land of any size, with a minimum of 1\u202fha of land (or 0.5\u202fha for marginal farmers) |\n| **Pradhan Mantri Krishi Sinchai Yojana (PMKSY)** | Irrigation development and water\u2011saving technologies | Farmers with irrigation facilities or those who can install drip/soaker systems |\n| **National Agriculture Insurance Scheme (NAIS)** | Insurance for crops, livestock, and fisheries | Farmers with land or livestock assets |\n| **Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)** | Employment generation for rural households | Rural households (including farmers) that meet the 100\u202fha land\u2011holding limit |\n\n> **Tip:** Most of these schemes are *central* and apply to all states, but some states run additional *state\u2011specific* schemes (e.g., crop\u2011specific subsidies, credit guarantees, or local extension services).  \n\n---\n\n## What We Need to Pinpoint the Best Schemes for You\n\n1. **State / Region** \u2013 Some schemes have state\u2011level variations or additional benefits.  \n2. **Primary Crop(s)** \u2013 Certain schemes target specific crops (e.g., sugarcane, cotton, horticulture).  \n3. **Landholding Size** \u2013 Determines eligibility for many schemes (e.g., PM-KISAN, NAIS).  \n4. **Current Challenges** \u2013 Are you looking for crop insurance, financial support, irrigation, or market access?  \n\nOnce you share this information, I can pull the exact scheme list (including central vs. state schemes, eligibility criteria, and links) and give you a step\u2011by\u2011step action plan.\n\n---\n\n### Next Steps\n\n- **Reply with**:  \n  - Your state or district  \n  - The main crop(s) you grow  \n  - Your landholding size (in hectares or acres)  \n  - Any specific issue you\u2019re facing (e.g., crop loss, lack of irrigation, need for credit)\n\n- **I\u2019ll then**:  \n  - List the top 3 schemes that match your profile  \n  - Provide eligibility questions and benefits  \n  - Offer links to official portals or local offices where you can apply\n\nFeel free to add any other details you think might help (e.g., whether you\u2019re a smallholder, a sharecropper, or a commercial farmer). Looking forward to helping you secure the support you deserve!",
+          "agent_outputs": [],
           "agent": "coordinator"
         },
-        "timestamp": "2025-10-16T06:55:43.968565"
+        "timestamp": "2026-01-04T14:22:18.962130"
       }
     ]
   }

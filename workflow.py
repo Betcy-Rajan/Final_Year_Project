@@ -5,7 +5,7 @@ import json
 import logging
 from typing import Dict, Any, List, Optional, TypedDict
 from langgraph.graph import StateGraph, END
-from agents import ReasonerNode, DiseaseAgentNode, PriceAgentNode, CoordinatorNode
+from agents import ReasonerNode, DiseaseAgentNode, PriceAgentNode, SchemeAgentNode, CoordinatorNode
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -17,6 +17,7 @@ class WorkflowState(TypedDict):
     reasoner_output: Optional[Dict[str, Any]]
     disease_agent_output: Optional[Dict[str, Any]]
     price_agent_output: Optional[Dict[str, Any]]
+    scheme_agent_output: Optional[Dict[str, Any]]
     coordinator_output: Optional[Dict[str, Any]]
     final_response: Optional[str]
     next_nodes: List[str]
@@ -30,6 +31,7 @@ class AgriMitraWorkflow:
         self.reasoner = ReasonerNode()
         self.disease_agent = DiseaseAgentNode()
         self.price_agent = PriceAgentNode()
+        self.scheme_agent = SchemeAgentNode()
         self.coordinator = CoordinatorNode()
         
         # Build the graph
@@ -43,6 +45,7 @@ class AgriMitraWorkflow:
         workflow.add_node("reasoner", self._reasoner_node)
         workflow.add_node("disease_agent", self._disease_agent_node)
         workflow.add_node("price_agent", self._price_agent_node)
+        workflow.add_node("scheme_agent", self._scheme_agent_node)
         workflow.add_node("coordinator", self._coordinator_node)
         
         # Define the flow
@@ -55,6 +58,7 @@ class AgriMitraWorkflow:
             {
                 "disease_agent": "disease_agent",
                 "price_agent": "price_agent",
+                "scheme_agent": "scheme_agent",
                 "both_agents": "disease_agent",  # Start with disease agent, then price
                 "coordinator": "coordinator",
                 END: END
@@ -74,6 +78,9 @@ class AgriMitraWorkflow:
         
         # From price agent to coordinator
         workflow.add_edge("price_agent", "coordinator")
+        
+        # From scheme agent to coordinator
+        workflow.add_edge("scheme_agent", "coordinator")
         
         # From coordinator to end
         workflow.add_edge("coordinator", END)
@@ -202,6 +209,47 @@ class AgriMitraWorkflow:
                 "execution_log": execution_log
             }
     
+    def _scheme_agent_node(self, state: WorkflowState) -> WorkflowState:
+        """Scheme agent node execution"""
+        logger.info("Executing Scheme Agent Node")
+        
+        try:
+            reasoner_data = state.get("reasoner_output", {})
+            reasoner_output = reasoner_data.get("reasoner_output", {})
+            user_state = reasoner_output.get("state")
+            
+            result = self.scheme_agent.process(state["user_input"], state=user_state)
+            
+            # Log execution
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "scheme_agent",
+                "input": {"user_input": state["user_input"], "state": user_state},
+                "output": result,
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "scheme_agent_output": result,
+                "execution_log": execution_log
+            }
+            
+        except Exception as e:
+            logger.error(f"Scheme agent node error: {e}")
+            execution_log = state.get("execution_log", [])
+            execution_log.append({
+                "node": "scheme_agent",
+                "error": str(e),
+                "timestamp": self._get_timestamp()
+            })
+            
+            return {
+                **state,
+                "scheme_agent_output": {"error": str(e)},
+                "execution_log": execution_log
+            }
+    
     def _coordinator_node(self, state: WorkflowState) -> WorkflowState:
         """Coordinator node execution"""
         logger.info("Executing Coordinator Node")
@@ -215,6 +263,9 @@ class AgriMitraWorkflow:
             
             if state.get("price_agent_output"):
                 agent_outputs.append(state["price_agent_output"])
+            
+            if state.get("scheme_agent_output"):
+                agent_outputs.append(state["scheme_agent_output"])
             
             result = self.coordinator.process(state["user_input"], agent_outputs)
             
@@ -262,7 +313,10 @@ class AgriMitraWorkflow:
         except Exception:
             pass
         
-        if "disease_agent" in next_nodes and "price_agent" in next_nodes:
+        # Prioritize scheme_agent if present
+        if "scheme_agent" in next_nodes:
+            return "scheme_agent"
+        elif "disease_agent" in next_nodes and "price_agent" in next_nodes:
             return "both_agents"
         elif "disease_agent" in next_nodes:
             return "disease_agent"
@@ -295,6 +349,7 @@ class AgriMitraWorkflow:
             reasoner_output=None,
             disease_agent_output=None,
             price_agent_output=None,
+            scheme_agent_output=None,
             coordinator_output=None,
             final_response=None,
             next_nodes=[],
