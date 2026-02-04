@@ -1,0 +1,97 @@
+# Firebase credentials (DO NOT COMMIT)
+firebase-credentials.json
+*firebase-credentials*.json
+*.json.firebase
+
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model files (if large)
+*.h5
+*.pkl
+*.model
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.yarn/
+.pnp.*
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Coverage reports
+.coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# Critical data files
+*.csv
+*.xlsx
+*.xls
+!**/test/**/*.csv
+!**/tests/**/*.csv
+
+# Session/interaction data (if sensitive)
+*_session_*_interactions.json
+*_interactions.json
+!**/test/**/*_interactions.json
+!**/tests/**/*_interactions.json
+
+# Evaluation results
+*_evaluation_results.json
+*_results.json
+!**/test/**/*_results.json
+!**/tests/**/*_results.json

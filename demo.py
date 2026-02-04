@@ -4,6 +4,7 @@ Demonstrates the system with predefined test cases
 """
 import json
 import sys
+import os
 from workflow import AgriMitraWorkflow
 import logging
 
@@ -56,8 +57,8 @@ class AgriMitraDemo:
             print("-" * 60)
             
             try:
-                # Run the workflow
-                result = self.workflow.run(demo['query'])
+                # Run the workflow (no image for demo queries)
+                result = self.workflow.run(demo['query'], image_path=None)
                 
                 # Display the final response
                 print(f"\n🌾 AgriMitra Response:")
@@ -107,8 +108,15 @@ class AgriMitraDemo:
                 print(f"\n🤖 Processing: {user_input}")
                 print("-" * 40)
                 
-                # Run the workflow
-                result = self.workflow.run(user_input)
+                # Run the workflow (check if input is image path)
+                image_path = None
+                if os.path.exists(user_input) and any(user_input.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.bmp']):
+                    image_path = user_input
+                    query_text = "Analyze this plant image for disease detection"
+                else:
+                    query_text = user_input
+                
+                result = self.workflow.run(query_text, image_path)
                 
                 # Display response
                 print(f"\n🌾 AgriMitra Response:")

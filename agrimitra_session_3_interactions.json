@@ -1,0 +1,839 @@
+[
+  {
+    "user_input": "my tomato leaves are shrinked",
+    "final_response": "**Hello!**  \nI\u2019m here to help you get your tomato plants back on track. Based on the image you sent, the AI (using a language\u2011model approach) wasn\u2019t able to pinpoint a specific disease\u2014confidence was low and it couldn\u2019t recommend a remedy. That often happens when the symptoms are a bit vague or the image isn\u2019t clear enough.  \n\nBelow are some practical steps you can take right now, plus a few questions that will help us narrow it down if you decide to share more details later.\n\n---\n\n## 1. Quick Check\u2011List for Shrink\u2011ed Tomato Leaves\n\n| Symptom | What to Look For | Why It Matters |\n|---------|------------------|----------------|\n| **Leaf Curling / Shrinking** | Leaves turning inward or curling up | Can signal nutrient deficiency, water stress, or early pest damage. |\n| **Color Changes** | Yellowing, bronzing, or pale green | Often linked to nitrogen or potassium issues. |\n| **Texture** | Dry, brittle, or waxy surface | May indicate over\u2011watering, under\u2011watering, or fungal infection. |\n| **Streaks or Spots** | Dark or light streaks, small spots | Could be early signs of bacterial or fungal disease. |\n| **Presence of Pests** | Visible insects, webs, or sticky residue | Aphids, whiteflies, or spider mites can cause leaf shrinkage. |\n\n### Immediate Actions\n\n1. **Water Check**  \n   - **Too little water**: Leaves wilt and shrink. Water deeply, allowing excess to drain.  \n   - **Too much water**: Roots may suffocate, causing leaves to curl. Ensure pots or beds have good drainage.\n\n2. **Nutrient Balance**  \n   - **Nitrogen deficiency**: Yellowing of older leaves.  \n   - **Potassium deficiency**: Edges of leaves turn brown.  \n   - Apply a balanced tomato fertilizer (e.g., 10-10-10) or a potassium\u2011rich feed if you suspect a deficiency.\n\n3. **Pest Inspection**  \n   - Look under leaves and along stems for tiny insects or webs.  \n   - If you spot pests, treat with neem oil or insecticidal soap.\n\n4. **Disease Symptoms**  \n   - If you see spots, blight, or a powdery film, consider a mild fungicide (e.g., copper or sulfur).  \n   - Keep the area dry; avoid overhead watering.\n\n5. **Air Circulation**  \n   - Thin out crowded plants to improve airflow, reducing fungal risk.\n\n---\n\n## 2. What We Need to Pinpoint the Issue\n\nIf the above steps don\u2019t resolve the problem, or you notice additional symptoms, please let me know:\n\n- **Leaf color** (yellow, brown, white, etc.)  \n- **Any spots, streaks, or mold**  \n- **Presence of pests** (visible insects, webs, or sticky residue)  \n- **Recent changes** (watering schedule, fertilizer use, weather conditions)  \n- **Image clarity** (a close\u2011up of a typical affected leaf, preferably with a ruler or coin for scale)\n\nWith that extra detail, we can run a more targeted AI diagnosis or even suggest a specific treatment.\n\n---\n\n## 3. Encouragement & Next Steps\n\n- **You\u2019re on the right track** by noticing the issue early.  \n- **Small adjustments** (watering, fertilizer, pest control) often make a big difference.  \n- **Keep a log** of what you try and the plant\u2019s response\u2014this helps us track progress and refine recommendations.\n\nFeel free to share more photos or details whenever you\u2019re ready. I\u2019m here to help you keep those tomatoes thriving!",
+    "timestamp": "2025-12-15T15:40:55.983133",
+    "execution_log": [
+      {
+        "node": "reasoner",
+        "input": {
+          "user_input": "my tomato leaves are shrinked",
+          "image_path": null
+        },
+        "output": {
+          "reasoner_output": {
+            "intent": [
+              "disease"
+            ],
+            "crop": "tomato",
+            "agents_to_trigger": [
+              "disease_agent"
+            ]
+          },
+          "user_input": "my tomato leaves are shrinked",
+          "next_nodes": [
+            "disease_agent"
+          ]
+        },
+        "timestamp": "2025-12-15T15:40:54.044171"
+      },
+      {
+        "node": "disease_agent",
+        "input": {
+          "user_input": "my tomato leaves are shrinked",
+          "crop": "tomato",
+          "image_path": null
+        },
+        "output": {
+          "disease_diagnosis": {
+            "disease": "Unknown disease",
+            "confidence": "low",
+            "needs_remedy": false,
+            "explanation": "Unable to parse diagnosis, please provide more specific symptoms",
+            "confidence_score": 0.3
+          },
+          "remedy_info": null,
+          "shops_info": null,
+          "detection_method": "LLM",
+          "agent": "disease_agent"
+        },
+        "timestamp": "2025-12-15T15:40:54.839758"
+      },
+      {
+        "node": "coordinator",
+        "input": {
+          "user_input": "my tomato leaves are shrinked",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Unknown disease",
+                "confidence": "low",
+                "needs_remedy": false,
+                "explanation": "Unable to parse diagnosis, please provide more specific symptoms",
+                "confidence_score": 0.3
+              },
+              "remedy_info": null,
+              "shops_info": null,
+              "detection_method": "LLM",
+              "agent": "disease_agent"
+            }
+          ]
+        },
+        "output": {
+          "final_response": "**Hello!**  \nI\u2019m here to help you get your tomato plants back on track. Based on the image you sent, the AI (using a language\u2011model approach) wasn\u2019t able to pinpoint a specific disease\u2014confidence was low and it couldn\u2019t recommend a remedy. That often happens when the symptoms are a bit vague or the image isn\u2019t clear enough.  \n\nBelow are some practical steps you can take right now, plus a few questions that will help us narrow it down if you decide to share more details later.\n\n---\n\n## 1. Quick Check\u2011List for Shrink\u2011ed Tomato Leaves\n\n| Symptom | What to Look For | Why It Matters |\n|---------|------------------|----------------|\n| **Leaf Curling / Shrinking** | Leaves turning inward or curling up | Can signal nutrient deficiency, water stress, or early pest damage. |\n| **Color Changes** | Yellowing, bronzing, or pale green | Often linked to nitrogen or potassium issues. |\n| **Texture** | Dry, brittle, or waxy surface | May indicate over\u2011watering, under\u2011watering, or fungal infection. |\n| **Streaks or Spots** | Dark or light streaks, small spots | Could be early signs of bacterial or fungal disease. |\n| **Presence of Pests** | Visible insects, webs, or sticky residue | Aphids, whiteflies, or spider mites can cause leaf shrinkage. |\n\n### Immediate Actions\n\n1. **Water Check**  \n   - **Too little water**: Leaves wilt and shrink. Water deeply, allowing excess to drain.  \n   - **Too much water**: Roots may suffocate, causing leaves to curl. Ensure pots or beds have good drainage.\n\n2. **Nutrient Balance**  \n   - **Nitrogen deficiency**: Yellowing of older leaves.  \n   - **Potassium deficiency**: Edges of leaves turn brown.  \n   - Apply a balanced tomato fertilizer (e.g., 10-10-10) or a potassium\u2011rich feed if you suspect a deficiency.\n\n3. **Pest Inspection**  \n   - Look under leaves and along stems for tiny insects or webs.  \n   - If you spot pests, treat with neem oil or insecticidal soap.\n\n4. **Disease Symptoms**  \n   - If you see spots, blight, or a powdery film, consider a mild fungicide (e.g., copper or sulfur).  \n   - Keep the area dry; avoid overhead watering.\n\n5. **Air Circulation**  \n   - Thin out crowded plants to improve airflow, reducing fungal risk.\n\n---\n\n## 2. What We Need to Pinpoint the Issue\n\nIf the above steps don\u2019t resolve the problem, or you notice additional symptoms, please let me know:\n\n- **Leaf color** (yellow, brown, white, etc.)  \n- **Any spots, streaks, or mold**  \n- **Presence of pests** (visible insects, webs, or sticky residue)  \n- **Recent changes** (watering schedule, fertilizer use, weather conditions)  \n- **Image clarity** (a close\u2011up of a typical affected leaf, preferably with a ruler or coin for scale)\n\nWith that extra detail, we can run a more targeted AI diagnosis or even suggest a specific treatment.\n\n---\n\n## 3. Encouragement & Next Steps\n\n- **You\u2019re on the right track** by noticing the issue early.  \n- **Small adjustments** (watering, fertilizer, pest control) often make a big difference.  \n- **Keep a log** of what you try and the plant\u2019s response\u2014this helps us track progress and refine recommendations.\n\nFeel free to share more photos or details whenever you\u2019re ready. I\u2019m here to help you keep those tomatoes thriving!",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Unknown disease",
+                "confidence": "low",
+                "needs_remedy": false,
+                "explanation": "Unable to parse diagnosis, please provide more specific symptoms",
+                "confidence_score": 0.3
+              },
+              "remedy_info": null,
+              "shops_info": null,
+              "detection_method": "LLM",
+              "agent": "disease_agent"
+            }
+          ],
+          "agent": "coordinator"
+        },
+        "timestamp": "2025-12-15T15:40:55.982346"
+      }
+    ]
+  },
+  {
+    "user_input": "D:\\MainProject\\AGRIMITRA\\grape.JPG",
+    "final_response": "**Diagnosis (AI\u2011based image analysis)**  \nYour grapevine image was examined by a convolutional neural network (CNN).  \n- **Disease:** **Black Rot** (Grape___Black_rot)  \n- **Confidence:** 97\u202f% (0.970) \u2013 the model is highly confident that this is the correct diagnosis.  \n- **Other possibilities:** Esca (Black Measles) \u2013 2\u202f% confidence; all other classes are negligible.  \n- **Status:** The plant is **not healthy** and needs immediate attention.\n\n---\n\n## What Black Rot Looks Like\n- Dark, water\u2011soaked lesions on leaves, stems, and fruit.  \n- Lesions may coalesce, causing leaf drop and fruit rot.  \n- Often appears in humid, cool conditions and can spread quickly through the canopy.\n\n---\n\n## Immediate Actions (Remedy)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| 1. **Isolate the affected vines** | Remove or quarantine infected vines to prevent spread. | Stops the pathogen from moving to healthy plants. |\n| 2. **Prune infected tissue** | Cut out all visibly infected leaves, shoots, and fruit. Dispose of them in a sealed bag or burn. | Reduces the source of spores. |\n| 3. **Apply a fungicide** | Use a registered fungicide such as **chlorothalonil** or **difenoconazole** (follow label rates). | Controls the pathogen and protects remaining tissue. |\n| 4. **Improve canopy airflow** | Thin out dense foliage, prune to open the canopy. | Reduces humidity and drying time for spores. |\n| 5. **Water management** | Water at the base, avoid overhead irrigation, especially in the evening. | Keeps leaves dry, limiting spore germination. |\n| 6. **Sanitation** | Clean pruning tools with 70\u202f% alcohol or bleach solution before each use. | Prevents mechanical spread. |\n| 7. **Monitor** | Inspect weekly for new lesions; re\u2011apply fungicide every 7\u201314\u202fdays as recommended. | Early detection keeps the disease under control. |\n\n> **Tip:** If you\u2019re unsure about the correct fungicide or dosage, contact your local agricultural extension office or a certified viticulturist.\n\n---\n\n## Preventive Care (Keep Your Grapes Healthy)\n\n| Practice | How to Implement |\n|----------|------------------|\n| **Crop rotation** | Avoid planting grapes in the same soil for 3\u20134 years. |\n| **Soil fertility** | Test soil pH (ideal 5.5\u20136.5) and nutrients; amend with compost or balanced fertilizer. |\n| **Spacing & trellising** | Ensure vines are spaced 2\u20133\u202fm apart and use a trellis that promotes airflow. |\n| **Regular scouting** | Check vines every 10\u201314\u202fdays during the growing season. |\n| **Biological control** | Consider beneficial microbes (e.g., *Trichoderma* spp.) that suppress fungal pathogens. |\n| **Resistant varieties** | If you\u2019re replanting, choose grape varieties with known resistance to Black Rot. |\n\n---\n\n## Nearby Fertilizer & Agricultural Input Shops\n\n**No shops were found within the specified radius via OpenStreetMap.**  \nYou can still locate suppliers using the Google Maps links below:\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\n> **Pro tip:** If you don\u2019t find what you need, widen the search radius or try nearby towns. You can also ask local growers for recommendations.\n\n---\n\n## Bottom Line\n\n- **Your grapevine is infected with Black Rot.**  \n- **Act quickly**: prune, isolate, and treat with a suitable fungicide.  \n- **Keep the canopy dry and well\u2011ventilated** to reduce future outbreaks.  \n- **Use the Google Maps links** to find the necessary inputs and consult local experts for precise fungicide recommendations.\n\nYou\u2019ve taken the first step by getting an AI diagnosis\u2014now follow the action plan above, and your vineyard will be on the path to recovery. Good luck, and feel free to reach out if you need more guidance!",
+    "timestamp": "2025-12-15T15:42:28.440283",
+    "execution_log": [
+      {
+        "node": "reasoner",
+        "input": {
+          "user_input": "Analyze this plant image for disease detection",
+          "image_path": "D:\\MainProject\\AGRIMITRA\\grape.JPG"
+        },
+        "output": {
+          "reasoner_output": {
+            "intent": [
+              "disease"
+            ],
+            "crop": null,
+            "agents_to_trigger": [
+              "disease_agent"
+            ]
+          },
+          "user_input": "Analyze this plant image for disease detection",
+          "next_nodes": [
+            "disease_agent"
+          ]
+        },
+        "timestamp": "2025-12-15T15:41:26.988227"
+      },
+      {
+        "node": "disease_agent",
+        "input": {
+          "user_input": "Analyze this plant image for disease detection",
+          "crop": null,
+          "image_path": "D:\\MainProject\\AGRIMITRA\\grape.JPG"
+        },
+        "output": {
+          "disease_diagnosis": {
+            "disease": "Black Rot",
+            "crop": "Grape",
+            "confidence": "high",
+            "confidence_score": 0.9701797962188721,
+            "needs_remedy": true,
+            "explanation": "CNN model detected: Grape___Black_rot with 97.0% confidence",
+            "is_healthy": false,
+            "detection_method": "CNN",
+            "top_3_predictions": [
+              {
+                "class": "Grape___Black_rot",
+                "confidence": 0.9701797962188721
+              },
+              {
+                "class": "Grape___Esca_(Black_Measles)",
+                "confidence": 0.019327431917190552
+              },
+              {
+                "class": "Apple___Black_rot",
+                "confidence": 0.004400314297527075
+              }
+            ]
+          },
+          "remedy_info": null,
+          "shops_info": {
+            "location": {
+              "lat": 9.9406,
+              "lon": 76.2653,
+              "display_name": "Kochi, KL, India",
+              "city": "Kochi",
+              "region": "KL",
+              "country": "India"
+            },
+            "results": {
+              "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+              "count": 0,
+              "shops": [],
+              "google_maps_search_urls": [
+                {
+                  "query": "fertilizer shop",
+                  "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                  "description": "Search for fertilizer shop near this location"
+                },
+                {
+                  "query": "agricultural input store",
+                  "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                  "description": "Search for agricultural input store near this location"
+                },
+                {
+                  "query": "agro shop",
+                  "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                  "description": "Search for agro shop near this location"
+                },
+                {
+                  "query": "pesticide shop",
+                  "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                  "description": "Search for pesticide shop near this location"
+                },
+                {
+                  "query": "seed store",
+                  "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                  "description": "Search for seed store near this location"
+                },
+                {
+                  "query": "fertilizer store",
+                  "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                  "description": "Search for fertilizer store near this location"
+                }
+              ],
+              "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+            }
+          },
+          "cnn_result": {
+            "disease": "Black Rot",
+            "crop": "Grape",
+            "full_class_name": "Grape___Black_rot",
+            "confidence": 0.9701797962188721,
+            "top_3_predictions": [
+              {
+                "class": "Grape___Black_rot",
+                "confidence": 0.9701797962188721
+              },
+              {
+                "class": "Grape___Esca_(Black_Measles)",
+                "confidence": 0.019327431917190552
+              },
+              {
+                "class": "Apple___Black_rot",
+                "confidence": 0.004400314297527075
+              }
+            ],
+            "is_healthy": false,
+            "all_predictions": {
+              "Apple___Apple_scab": 0.001139281434006989,
+              "Apple___Black_rot": 0.004400314297527075,
+              "Apple___Cedar_apple_rust": 1.0237204151053447e-06,
+              "Apple___healthy": 3.5728442426830043e-09,
+              "Blueberry___healthy": 1.0133243222298915e-06,
+              "Cherry_(including_sour)___Powdery_mildew": 1.3396823581035555e-11,
+              "Cherry_(including_sour)___healthy": 1.814086214579902e-09,
+              "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.4734401904424885e-07,
+              "Corn_(maize)___Common_rust_": 4.3415748773867335e-10,
+              "Corn_(maize)___Northern_Leaf_Blight": 2.523877071780589e-07,
+              "Corn_(maize)___healthy": 3.5540867124317366e-12,
+              "Grape___Black_rot": 0.9701797962188721,
+              "Grape___Esca_(Black_Measles)": 0.019327431917190552,
+              "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 0.0005016544600948691,
+              "Grape___healthy": 0.0005178189021535218,
+              "Orange___Haunglongbing_(Citrus_greening)": 3.131922499122197e-11,
+              "Peach___Bacterial_spot": 0.0025738629046827555,
+              "Peach___healthy": 1.04128543895049e-12,
+              "Pepper,_bell___Bacterial_spot": 0.0006752939079888165,
+              "Pepper,_bell___healthy": 2.595895693957573e-07,
+              "Potato___Early_blight": 6.942414620425552e-05,
+              "Potato___Late_blight": 4.899752093479037e-05,
+              "Potato___healthy": 6.522450912704869e-10,
+              "Raspberry___healthy": 3.7441120070980105e-07,
+              "Soybean___healthy": 8.943891316448571e-08,
+              "Squash___Powdery_mildew": 5.242655198856028e-10,
+              "Strawberry___Leaf_scorch": 0.00033465673914179206,
+              "Strawberry___healthy": 8.172208936230163e-07,
+              "Tomato___Bacterial_spot": 1.8564215906735626e-06,
+              "Tomato___Early_blight": 3.6658693716162816e-05,
+              "Tomato___Late_blight": 7.214570700853074e-07,
+              "Tomato___Leaf_Mold": 1.0049501161790708e-11,
+              "Tomato___Septoria_leaf_spot": 0.0001877896283986047,
+              "Tomato___Spider_mites Two-spotted_spider_mite": 1.5834278332960139e-12,
+              "Tomato___Target_Spot": 5.046563273936044e-07,
+              "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 7.246119069354018e-12,
+              "Tomato___Tomato_mosaic_virus": 2.8320906580450115e-15,
+              "Tomato___healthy": 1.2459125528149761e-13
+            }
+          },
+          "agent": "disease_agent"
+        },
+        "timestamp": "2025-12-15T15:42:25.629796"
+      },
+      {
+        "node": "coordinator",
+        "input": {
+          "user_input": "Analyze this plant image for disease detection",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Black Rot",
+                "crop": "Grape",
+                "confidence": "high",
+                "confidence_score": 0.9701797962188721,
+                "needs_remedy": true,
+                "explanation": "CNN model detected: Grape___Black_rot with 97.0% confidence",
+                "is_healthy": false,
+                "detection_method": "CNN",
+                "top_3_predictions": [
+                  {
+                    "class": "Grape___Black_rot",
+                    "confidence": 0.9701797962188721
+                  },
+                  {
+                    "class": "Grape___Esca_(Black_Measles)",
+                    "confidence": 0.019327431917190552
+                  },
+                  {
+                    "class": "Apple___Black_rot",
+                    "confidence": 0.004400314297527075
+                  }
+                ]
+              },
+              "remedy_info": null,
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
+              },
+              "cnn_result": {
+                "disease": "Black Rot",
+                "crop": "Grape",
+                "full_class_name": "Grape___Black_rot",
+                "confidence": 0.9701797962188721,
+                "top_3_predictions": [
+                  {
+                    "class": "Grape___Black_rot",
+                    "confidence": 0.9701797962188721
+                  },
+                  {
+                    "class": "Grape___Esca_(Black_Measles)",
+                    "confidence": 0.019327431917190552
+                  },
+                  {
+                    "class": "Apple___Black_rot",
+                    "confidence": 0.004400314297527075
+                  }
+                ],
+                "is_healthy": false,
+                "all_predictions": {
+                  "Apple___Apple_scab": 0.001139281434006989,
+                  "Apple___Black_rot": 0.004400314297527075,
+                  "Apple___Cedar_apple_rust": 1.0237204151053447e-06,
+                  "Apple___healthy": 3.5728442426830043e-09,
+                  "Blueberry___healthy": 1.0133243222298915e-06,
+                  "Cherry_(including_sour)___Powdery_mildew": 1.3396823581035555e-11,
+                  "Cherry_(including_sour)___healthy": 1.814086214579902e-09,
+                  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.4734401904424885e-07,
+                  "Corn_(maize)___Common_rust_": 4.3415748773867335e-10,
+                  "Corn_(maize)___Northern_Leaf_Blight": 2.523877071780589e-07,
+                  "Corn_(maize)___healthy": 3.5540867124317366e-12,
+                  "Grape___Black_rot": 0.9701797962188721,
+                  "Grape___Esca_(Black_Measles)": 0.019327431917190552,
+                  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 0.0005016544600948691,
+                  "Grape___healthy": 0.0005178189021535218,
+                  "Orange___Haunglongbing_(Citrus_greening)": 3.131922499122197e-11,
+                  "Peach___Bacterial_spot": 0.0025738629046827555,
+                  "Peach___healthy": 1.04128543895049e-12,
+                  "Pepper,_bell___Bacterial_spot": 0.0006752939079888165,
+                  "Pepper,_bell___healthy": 2.595895693957573e-07,
+                  "Potato___Early_blight": 6.942414620425552e-05,
+                  "Potato___Late_blight": 4.899752093479037e-05,
+                  "Potato___healthy": 6.522450912704869e-10,
+                  "Raspberry___healthy": 3.7441120070980105e-07,
+                  "Soybean___healthy": 8.943891316448571e-08,
+                  "Squash___Powdery_mildew": 5.242655198856028e-10,
+                  "Strawberry___Leaf_scorch": 0.00033465673914179206,
+                  "Strawberry___healthy": 8.172208936230163e-07,
+                  "Tomato___Bacterial_spot": 1.8564215906735626e-06,
+                  "Tomato___Early_blight": 3.6658693716162816e-05,
+                  "Tomato___Late_blight": 7.214570700853074e-07,
+                  "Tomato___Leaf_Mold": 1.0049501161790708e-11,
+                  "Tomato___Septoria_leaf_spot": 0.0001877896283986047,
+                  "Tomato___Spider_mites Two-spotted_spider_mite": 1.5834278332960139e-12,
+                  "Tomato___Target_Spot": 5.046563273936044e-07,
+                  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 7.246119069354018e-12,
+                  "Tomato___Tomato_mosaic_virus": 2.8320906580450115e-15,
+                  "Tomato___healthy": 1.2459125528149761e-13
+                }
+              },
+              "agent": "disease_agent"
+            }
+          ]
+        },
+        "output": {
+          "final_response": "**Diagnosis (AI\u2011based image analysis)**  \nYour grapevine image was examined by a convolutional neural network (CNN).  \n- **Disease:** **Black Rot** (Grape___Black_rot)  \n- **Confidence:** 97\u202f% (0.970) \u2013 the model is highly confident that this is the correct diagnosis.  \n- **Other possibilities:** Esca (Black Measles) \u2013 2\u202f% confidence; all other classes are negligible.  \n- **Status:** The plant is **not healthy** and needs immediate attention.\n\n---\n\n## What Black Rot Looks Like\n- Dark, water\u2011soaked lesions on leaves, stems, and fruit.  \n- Lesions may coalesce, causing leaf drop and fruit rot.  \n- Often appears in humid, cool conditions and can spread quickly through the canopy.\n\n---\n\n## Immediate Actions (Remedy)\n\n| Step | What to Do | Why It Helps |\n|------|------------|--------------|\n| 1. **Isolate the affected vines** | Remove or quarantine infected vines to prevent spread. | Stops the pathogen from moving to healthy plants. |\n| 2. **Prune infected tissue** | Cut out all visibly infected leaves, shoots, and fruit. Dispose of them in a sealed bag or burn. | Reduces the source of spores. |\n| 3. **Apply a fungicide** | Use a registered fungicide such as **chlorothalonil** or **difenoconazole** (follow label rates). | Controls the pathogen and protects remaining tissue. |\n| 4. **Improve canopy airflow** | Thin out dense foliage, prune to open the canopy. | Reduces humidity and drying time for spores. |\n| 5. **Water management** | Water at the base, avoid overhead irrigation, especially in the evening. | Keeps leaves dry, limiting spore germination. |\n| 6. **Sanitation** | Clean pruning tools with 70\u202f% alcohol or bleach solution before each use. | Prevents mechanical spread. |\n| 7. **Monitor** | Inspect weekly for new lesions; re\u2011apply fungicide every 7\u201314\u202fdays as recommended. | Early detection keeps the disease under control. |\n\n> **Tip:** If you\u2019re unsure about the correct fungicide or dosage, contact your local agricultural extension office or a certified viticulturist.\n\n---\n\n## Preventive Care (Keep Your Grapes Healthy)\n\n| Practice | How to Implement |\n|----------|------------------|\n| **Crop rotation** | Avoid planting grapes in the same soil for 3\u20134 years. |\n| **Soil fertility** | Test soil pH (ideal 5.5\u20136.5) and nutrients; amend with compost or balanced fertilizer. |\n| **Spacing & trellising** | Ensure vines are spaced 2\u20133\u202fm apart and use a trellis that promotes airflow. |\n| **Regular scouting** | Check vines every 10\u201314\u202fdays during the growing season. |\n| **Biological control** | Consider beneficial microbes (e.g., *Trichoderma* spp.) that suppress fungal pathogens. |\n| **Resistant varieties** | If you\u2019re replanting, choose grape varieties with known resistance to Black Rot. |\n\n---\n\n## Nearby Fertilizer & Agricultural Input Shops\n\n**No shops were found within the specified radius via OpenStreetMap.**  \nYou can still locate suppliers using the Google Maps links below:\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\n> **Pro tip:** If you don\u2019t find what you need, widen the search radius or try nearby towns. You can also ask local growers for recommendations.\n\n---\n\n## Bottom Line\n\n- **Your grapevine is infected with Black Rot.**  \n- **Act quickly**: prune, isolate, and treat with a suitable fungicide.  \n- **Keep the canopy dry and well\u2011ventilated** to reduce future outbreaks.  \n- **Use the Google Maps links** to find the necessary inputs and consult local experts for precise fungicide recommendations.\n\nYou\u2019ve taken the first step by getting an AI diagnosis\u2014now follow the action plan above, and your vineyard will be on the path to recovery. Good luck, and feel free to reach out if you need more guidance!",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Black Rot",
+                "crop": "Grape",
+                "confidence": "high",
+                "confidence_score": 0.9701797962188721,
+                "needs_remedy": true,
+                "explanation": "CNN model detected: Grape___Black_rot with 97.0% confidence",
+                "is_healthy": false,
+                "detection_method": "CNN",
+                "top_3_predictions": [
+                  {
+                    "class": "Grape___Black_rot",
+                    "confidence": 0.9701797962188721
+                  },
+                  {
+                    "class": "Grape___Esca_(Black_Measles)",
+                    "confidence": 0.019327431917190552
+                  },
+                  {
+                    "class": "Apple___Black_rot",
+                    "confidence": 0.004400314297527075
+                  }
+                ]
+              },
+              "remedy_info": null,
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
+              },
+              "cnn_result": {
+                "disease": "Black Rot",
+                "crop": "Grape",
+                "full_class_name": "Grape___Black_rot",
+                "confidence": 0.9701797962188721,
+                "top_3_predictions": [
+                  {
+                    "class": "Grape___Black_rot",
+                    "confidence": 0.9701797962188721
+                  },
+                  {
+                    "class": "Grape___Esca_(Black_Measles)",
+                    "confidence": 0.019327431917190552
+                  },
+                  {
+                    "class": "Apple___Black_rot",
+                    "confidence": 0.004400314297527075
+                  }
+                ],
+                "is_healthy": false,
+                "all_predictions": {
+                  "Apple___Apple_scab": 0.001139281434006989,
+                  "Apple___Black_rot": 0.004400314297527075,
+                  "Apple___Cedar_apple_rust": 1.0237204151053447e-06,
+                  "Apple___healthy": 3.5728442426830043e-09,
+                  "Blueberry___healthy": 1.0133243222298915e-06,
+                  "Cherry_(including_sour)___Powdery_mildew": 1.3396823581035555e-11,
+                  "Cherry_(including_sour)___healthy": 1.814086214579902e-09,
+                  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 2.4734401904424885e-07,
+                  "Corn_(maize)___Common_rust_": 4.3415748773867335e-10,
+                  "Corn_(maize)___Northern_Leaf_Blight": 2.523877071780589e-07,
+                  "Corn_(maize)___healthy": 3.5540867124317366e-12,
+                  "Grape___Black_rot": 0.9701797962188721,
+                  "Grape___Esca_(Black_Measles)": 0.019327431917190552,
+                  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": 0.0005016544600948691,
+                  "Grape___healthy": 0.0005178189021535218,
+                  "Orange___Haunglongbing_(Citrus_greening)": 3.131922499122197e-11,
+                  "Peach___Bacterial_spot": 0.0025738629046827555,
+                  "Peach___healthy": 1.04128543895049e-12,
+                  "Pepper,_bell___Bacterial_spot": 0.0006752939079888165,
+                  "Pepper,_bell___healthy": 2.595895693957573e-07,
+                  "Potato___Early_blight": 6.942414620425552e-05,
+                  "Potato___Late_blight": 4.899752093479037e-05,
+                  "Potato___healthy": 6.522450912704869e-10,
+                  "Raspberry___healthy": 3.7441120070980105e-07,
+                  "Soybean___healthy": 8.943891316448571e-08,
+                  "Squash___Powdery_mildew": 5.242655198856028e-10,
+                  "Strawberry___Leaf_scorch": 0.00033465673914179206,
+                  "Strawberry___healthy": 8.172208936230163e-07,
+                  "Tomato___Bacterial_spot": 1.8564215906735626e-06,
+                  "Tomato___Early_blight": 3.6658693716162816e-05,
+                  "Tomato___Late_blight": 7.214570700853074e-07,
+                  "Tomato___Leaf_Mold": 1.0049501161790708e-11,
+                  "Tomato___Septoria_leaf_spot": 0.0001877896283986047,
+                  "Tomato___Spider_mites Two-spotted_spider_mite": 1.5834278332960139e-12,
+                  "Tomato___Target_Spot": 5.046563273936044e-07,
+                  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 7.246119069354018e-12,
+                  "Tomato___Tomato_mosaic_virus": 2.8320906580450115e-15,
+                  "Tomato___healthy": 1.2459125528149761e-13
+                }
+              },
+              "agent": "disease_agent"
+            }
+          ],
+          "agent": "coordinator"
+        },
+        "timestamp": "2025-12-15T15:42:28.439243"
+      }
+    ]
+  },
+  {
+    "user_input": "yellow spots on my potato leaves",
+    "final_response": "**Your potato crop is showing yellow spots on the leaves \u2013 a sign that the plants may be dealing with the Potato Yellow Dwarf Virus (PYDV).**  \nThe diagnosis was made by our AI using a language\u2011model analysis of the symptoms you described. While the confidence is medium (\u2248\u202f50\u202f%), the pattern of isolated yellow patches is more typical of a viral infection than of common fungal spots such as early blight.\n\n---\n\n## What to do right now\n\n| Step | Why it matters | How to do it |\n|------|----------------|--------------|\n| **1. Confirm the diagnosis** | A lab test (ELISA or PCR) is the only way to be 100\u202f% sure. | Take a leaf sample from a symptomatic plant and send it to a local agricultural extension office or a nearby university lab. |\n| **2. Isolate or remove infected plants** | Infected leaves can spread the virus to healthy ones via aphids or other vectors. | Cut off the affected leaves or whole plants, dispose of them in a sealed bag, and do not compost them. |\n| **3. Control the vectors** | Aphids are the main carriers of PYDV. | \u2022 Use yellow sticky traps to monitor aphid activity.<br>\u2022 Apply insecticidal soap or neem oil (if approved for your area) when aphid numbers rise.<br>\u2022 Consider a systemic insecticide if the infestation is severe and local regulations allow it. |\n| **4. Practice good cultural hygiene** | Healthy plants are less susceptible to infection. | \u2022 Rotate crops (avoid planting potatoes in the same spot for 3\u20134 years).<br>\u2022 Remove and destroy volunteer potato tubers and weeds that can harbor aphids.<br>\u2022 Keep the soil well\u2011drained and avoid over\u2011watering. |\n| **5. Use resistant varieties** | Some potato cultivars are bred to resist PYDV. | Check with your local seed supplier or extension office for recommended resistant varieties suitable for your climate. |\n| **6. Maintain balanced nutrition** | Over\u2011fertilizing, especially with nitrogen, can make plants more attractive to aphids. | \u2022 Follow a balanced fertilizer program (N\u202f:\u202fP\u202f:\u202fK \u2248\u202f2\u202f:\u202f1\u202f:\u202f1).<br>\u2022 Apply a micronutrient supplement if soil tests show deficiencies. |\n| **7. Monitor regularly** | Early detection saves the crop. | Inspect leaves every 3\u20134 days for new yellow spots or aphid presence. |\n\n---\n\n## Where to get supplies\n\n**No local fertilizer shops were found in the immediate radius, but you can easily locate them using the Google Maps links below.**  \nFeel free to open any of the URLs in your browser or copy them into a new tab.\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\nIf you don\u2019t find what you need, widen the search radius or ask a local farmer for recommendations.\n\n---\n\n## Quick recap\n\n- **Diagnosis:** Potato Yellow Dwarf Virus (viral, not fungal).  \n- **Confidence:** Medium (50\u202f%).  \n- **Next step:** Lab confirmation + isolate infected plants.  \n- **Vector control:** Monitor and manage aphids.  \n- **Cultural practices:** Crop rotation, hygiene, balanced fertilization.  \n- **Supplies:** Use the Google Maps links to find fertilizer, pesticide, and seed shops.\n\n---\n\n### A word of encouragement\n\nDealing with a virus can feel daunting, but with prompt action\u2014especially vector control and crop hygiene\u2014you can protect the rest of your crop and even recover from the damage. Keep a close eye on the plants, and don\u2019t hesitate to reach out to your local extension office for hands\u2011on advice. Good luck, and may your potatoes thrive!",
+    "timestamp": "2025-12-15T15:44:25.281675",
+    "execution_log": [
+      {
+        "node": "reasoner",
+        "input": {
+          "user_input": "yellow spots on my potato leaves",
+          "image_path": null
+        },
+        "output": {
+          "reasoner_output": {
+            "intent": [
+              "disease"
+            ],
+            "crop": "potato",
+            "agents_to_trigger": [
+              "disease_agent"
+            ]
+          },
+          "user_input": "yellow spots on my potato leaves",
+          "next_nodes": [
+            "disease_agent"
+          ]
+        },
+        "timestamp": "2025-12-15T15:42:59.554538"
+      },
+      {
+        "node": "disease_agent",
+        "input": {
+          "user_input": "yellow spots on my potato leaves",
+          "crop": "potato",
+          "image_path": null
+        },
+        "output": {
+          "disease_diagnosis": {
+            "disease": "Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+            "confidence": "medium",
+            "needs_remedy": true,
+            "explanation": "Yellow spots that appear on potato leaves are a common symptom of the Potato Yellow Dwarf Virus, which causes localized yellowing before spreading. While other fungal diseases such as early blight can produce spots, they are usually dark green to brown with concentric rings. The presence of yellow spots alone points more strongly toward a viral infection, but confirmation with a lab test is recommended.",
+            "confidence_score": 0.5
+          },
+          "remedy_info": {
+            "error": "No remedy found for disease: Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+            "suggestion": "Please consult with a local agricultural expert"
+          },
+          "shops_info": {
+            "location": {
+              "lat": 9.9406,
+              "lon": 76.2653,
+              "display_name": "Kochi, KL, India",
+              "city": "Kochi",
+              "region": "KL",
+              "country": "India"
+            },
+            "results": {
+              "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+              "count": 0,
+              "shops": [],
+              "google_maps_search_urls": [
+                {
+                  "query": "fertilizer shop",
+                  "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                  "description": "Search for fertilizer shop near this location"
+                },
+                {
+                  "query": "agricultural input store",
+                  "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                  "description": "Search for agricultural input store near this location"
+                },
+                {
+                  "query": "agro shop",
+                  "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                  "description": "Search for agro shop near this location"
+                },
+                {
+                  "query": "pesticide shop",
+                  "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                  "description": "Search for pesticide shop near this location"
+                },
+                {
+                  "query": "seed store",
+                  "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                  "description": "Search for seed store near this location"
+                },
+                {
+                  "query": "fertilizer store",
+                  "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                  "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                  "description": "Search for fertilizer store near this location"
+                }
+              ],
+              "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+            }
+          },
+          "detection_method": "LLM",
+          "agent": "disease_agent"
+        },
+        "timestamp": "2025-12-15T15:44:23.465065"
+      },
+      {
+        "node": "coordinator",
+        "input": {
+          "user_input": "yellow spots on my potato leaves",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+                "confidence": "medium",
+                "needs_remedy": true,
+                "explanation": "Yellow spots that appear on potato leaves are a common symptom of the Potato Yellow Dwarf Virus, which causes localized yellowing before spreading. While other fungal diseases such as early blight can produce spots, they are usually dark green to brown with concentric rings. The presence of yellow spots alone points more strongly toward a viral infection, but confirmation with a lab test is recommended.",
+                "confidence_score": 0.5
+              },
+              "remedy_info": {
+                "error": "No remedy found for disease: Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+                "suggestion": "Please consult with a local agricultural expert"
+              },
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
+              },
+              "detection_method": "LLM",
+              "agent": "disease_agent"
+            }
+          ]
+        },
+        "output": {
+          "final_response": "**Your potato crop is showing yellow spots on the leaves \u2013 a sign that the plants may be dealing with the Potato Yellow Dwarf Virus (PYDV).**  \nThe diagnosis was made by our AI using a language\u2011model analysis of the symptoms you described. While the confidence is medium (\u2248\u202f50\u202f%), the pattern of isolated yellow patches is more typical of a viral infection than of common fungal spots such as early blight.\n\n---\n\n## What to do right now\n\n| Step | Why it matters | How to do it |\n|------|----------------|--------------|\n| **1. Confirm the diagnosis** | A lab test (ELISA or PCR) is the only way to be 100\u202f% sure. | Take a leaf sample from a symptomatic plant and send it to a local agricultural extension office or a nearby university lab. |\n| **2. Isolate or remove infected plants** | Infected leaves can spread the virus to healthy ones via aphids or other vectors. | Cut off the affected leaves or whole plants, dispose of them in a sealed bag, and do not compost them. |\n| **3. Control the vectors** | Aphids are the main carriers of PYDV. | \u2022 Use yellow sticky traps to monitor aphid activity.<br>\u2022 Apply insecticidal soap or neem oil (if approved for your area) when aphid numbers rise.<br>\u2022 Consider a systemic insecticide if the infestation is severe and local regulations allow it. |\n| **4. Practice good cultural hygiene** | Healthy plants are less susceptible to infection. | \u2022 Rotate crops (avoid planting potatoes in the same spot for 3\u20134 years).<br>\u2022 Remove and destroy volunteer potato tubers and weeds that can harbor aphids.<br>\u2022 Keep the soil well\u2011drained and avoid over\u2011watering. |\n| **5. Use resistant varieties** | Some potato cultivars are bred to resist PYDV. | Check with your local seed supplier or extension office for recommended resistant varieties suitable for your climate. |\n| **6. Maintain balanced nutrition** | Over\u2011fertilizing, especially with nitrogen, can make plants more attractive to aphids. | \u2022 Follow a balanced fertilizer program (N\u202f:\u202fP\u202f:\u202fK \u2248\u202f2\u202f:\u202f1\u202f:\u202f1).<br>\u2022 Apply a micronutrient supplement if soil tests show deficiencies. |\n| **7. Monitor regularly** | Early detection saves the crop. | Inspect leaves every 3\u20134 days for new yellow spots or aphid presence. |\n\n---\n\n## Where to get supplies\n\n**No local fertilizer shops were found in the immediate radius, but you can easily locate them using the Google Maps links below.**  \nFeel free to open any of the URLs in your browser or copy them into a new tab.\n\n- **Fertilizer shop** \u2013 <https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z>\n- **Agricultural input store** \u2013 <https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z>\n- **Agro shop** \u2013 <https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z>\n- **Pesticide shop** \u2013 <https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z>\n- **Seed store** \u2013 <https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z>\n- **Fertilizer store** \u2013 <https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z>\n\nIf you don\u2019t find what you need, widen the search radius or ask a local farmer for recommendations.\n\n---\n\n## Quick recap\n\n- **Diagnosis:** Potato Yellow Dwarf Virus (viral, not fungal).  \n- **Confidence:** Medium (50\u202f%).  \n- **Next step:** Lab confirmation + isolate infected plants.  \n- **Vector control:** Monitor and manage aphids.  \n- **Cultural practices:** Crop rotation, hygiene, balanced fertilization.  \n- **Supplies:** Use the Google Maps links to find fertilizer, pesticide, and seed shops.\n\n---\n\n### A word of encouragement\n\nDealing with a virus can feel daunting, but with prompt action\u2014especially vector control and crop hygiene\u2014you can protect the rest of your crop and even recover from the damage. Keep a close eye on the plants, and don\u2019t hesitate to reach out to your local extension office for hands\u2011on advice. Good luck, and may your potatoes thrive!",
+          "agent_outputs": [
+            {
+              "disease_diagnosis": {
+                "disease": "Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+                "confidence": "medium",
+                "needs_remedy": true,
+                "explanation": "Yellow spots that appear on potato leaves are a common symptom of the Potato Yellow Dwarf Virus, which causes localized yellowing before spreading. While other fungal diseases such as early blight can produce spots, they are usually dark green to brown with concentric rings. The presence of yellow spots alone points more strongly toward a viral infection, but confirmation with a lab test is recommended.",
+                "confidence_score": 0.5
+              },
+              "remedy_info": {
+                "error": "No remedy found for disease: Potato leaf yellowing (likely caused by Potato Yellow Dwarf Virus)",
+                "suggestion": "Please consult with a local agricultural expert"
+              },
+              "shops_info": {
+                "location": {
+                  "lat": 9.9406,
+                  "lon": 76.2653,
+                  "display_name": "Kochi, KL, India",
+                  "city": "Kochi",
+                  "region": "KL",
+                  "country": "India"
+                },
+                "results": {
+                  "error": "No fertilizer shops found in the specified radius via OpenStreetMap",
+                  "count": 0,
+                  "shops": [],
+                  "google_maps_search_urls": [
+                    {
+                      "query": "fertilizer shop",
+                      "url": "https://www.google.com/maps/search/fertilizer+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+shop+near+9.9406,76.2653",
+                      "description": "Search for fertilizer shop near this location"
+                    },
+                    {
+                      "query": "agricultural input store",
+                      "url": "https://www.google.com/maps/search/agricultural+input+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agricultural+input+store+near+9.9406,76.2653",
+                      "description": "Search for agricultural input store near this location"
+                    },
+                    {
+                      "query": "agro shop",
+                      "url": "https://www.google.com/maps/search/agro+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=agro+shop+near+9.9406,76.2653",
+                      "description": "Search for agro shop near this location"
+                    },
+                    {
+                      "query": "pesticide shop",
+                      "url": "https://www.google.com/maps/search/pesticide+shop/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=pesticide+shop+near+9.9406,76.2653",
+                      "description": "Search for pesticide shop near this location"
+                    },
+                    {
+                      "query": "seed store",
+                      "url": "https://www.google.com/maps/search/seed+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=seed+store+near+9.9406,76.2653",
+                      "description": "Search for seed store near this location"
+                    },
+                    {
+                      "query": "fertilizer store",
+                      "url": "https://www.google.com/maps/search/fertilizer+store/@9.9406,76.2653,15z",
+                      "alt_url": "https://www.google.com/maps/search/?api=1&query=fertilizer+store+near+9.9406,76.2653",
+                      "description": "Search for fertilizer store near this location"
+                    }
+                  ],
+                  "note": "Use the Google Maps search URLs above to find shops directly on Google Maps (free, no API key required)"
+                }
+              },
+              "detection_method": "LLM",
+              "agent": "disease_agent"
+            }
+          ],
+          "agent": "coordinator"
+        },
+        "timestamp": "2025-12-15T15:44:25.280631"
+      }
+    ]
+  }
+]

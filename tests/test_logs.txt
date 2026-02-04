@@ -1,0 +1,21 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.5, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\Agrimitra-copy
+configfile: pytest.ini
+plugins: anyio-4.9.0, langsmith-0.4.4, cov-7.0.0, json-report-1.5.0, metadata-3.1.1, mock-3.15.1
+collected 15 items
+
+tests\test_buyer_connect_agent.py .                                      [  6%]
+tests\test_matching_logic.py ..                                          [ 20%]
+tests\test_models.py ....                                                [ 46%]
+tests\test_negotiation_flow.py ..                                        [ 60%]
+tests\test_price_negotiation.py ..                                       [ 73%]
+tests\test_storage.py ....                                               [100%]
+
+============================== warnings summary ===============================
+C:\Users\krupa\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8
+  C:\Users\krupa\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+    if not hasattr(np, "object"):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 15 passed, 1 warning in 28.12s ========================

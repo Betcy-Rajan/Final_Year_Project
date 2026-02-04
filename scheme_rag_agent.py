@@ -684,6 +684,13 @@ class SchemeRAGAgent:
             elif profile.scheme_scope == "central_only":
                 if scheme_state:  # Not a central scheme
                     continue
+            elif profile.scheme_scope == "all":
+                # When scope is "all" but a state is specified, show that state's schemes + central schemes
+                if profile.state:
+                    # Only include schemes for the specified state OR central schemes
+                    if scheme_state and scheme_state.lower() != profile.state.lower():
+                        continue  # Skip schemes from other states
+                # If no state specified, include all schemes (both state and central)
             
             # Filter by sub-category if specified
             if profile.sub_category:

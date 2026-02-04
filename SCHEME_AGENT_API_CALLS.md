@@ -41,3 +41,6 @@ response = self.llm.chat(SCHEME_ELIGIBILITY_PROMPT, context)
 3. **Skip eligibility questions when using RAG** - RAG already provides eligibility assessment
 4. **Combine prompts** - Merge query parsing and eligibility generation into one call
 
+
+
+

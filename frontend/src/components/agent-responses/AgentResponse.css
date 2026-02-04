@@ -1,0 +1,557 @@
+.agent-response {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #2d8659;
+}
+
+.response-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.response-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2d8659;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.response-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Disease Response Styles */
+.disease-card {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #e74c3c;
+}
+
+.disease-title-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.disease-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.confidence-badge {
+  background: #e74c3c;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.disease-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.symptoms-section,
+.treatments-card,
+.prevention-card,
+.shop-info-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.section-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.symptoms-list,
+.prevention-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.symptoms-list li,
+.prevention-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.symptoms-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.prevention-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.treatments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.treatment-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.treatment-number {
+  background: #2d8659;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.treatment-content {
+  flex: 1;
+}
+
+.treatment-content p {
+  margin: 0.25rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.dosage {
+  color: #2d8659;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Price Response Styles */
+.price-response {
+  border-left-color: #f39c12;
+}
+
+.price-card-main {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border-left: 4px solid #f39c12;
+}
+
+.price-display {
+  margin-bottom: 1.5rem;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.price-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f39c12;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.price-unit {
+  font-size: 1rem;
+  color: #666;
+}
+
+.trend-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trend-icon {
+  font-size: 1.5rem;
+}
+
+.market-info,
+.benchmark-info,
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.info-value {
+  color: #2d8659;
+  font-weight: 500;
+}
+
+.recommendation-card,
+.historical-card {
+  background: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 3px solid #2d8659;
+}
+
+.recommendation-text {
+  margin: 0.5rem 0 0 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.historical-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.historical-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+/* Buyer Connect Response Styles */
+.buyer-connect-response {
+  border-left-color: #3498db;
+}
+
+.buyers-section {
+  margin-top: 1rem;
+}
+
+.buyers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.buyer-card {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #3498db;
+}
+
+.buyer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.buyer-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.3rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.buyer-location {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.match-score {
+  text-align: center;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3498db;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.buyer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.detail-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #333;
+  font-weight: 600;
+}
+
+.price-suggestion {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 2px solid #27ae60;
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #27ae60;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-icon {
+  font-size: 1.2rem;
+}
+
+.suggestion-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #27ae60;
+  margin: 0.5rem 0;
+}
+
+.suggestion-explanation {
+  color: #555;
+  line-height: 1.6;
+  margin: 0.75rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+.price-range {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.no-buyers {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Scheme Response Styles */
+.scheme-response {
+  border-left-color: #9b59b6;
+}
+
+.schemes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.scheme-card {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #9b59b6;
+}
+
+.scheme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.scheme-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #7b1fa2;
+  font-weight: 600;
+}
+
+.scheme-category {
+  background: white;
+  color: #9b59b6;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.scheme-description {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.scheme-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+}
+
+.detail-text {
+  color: #555;
+}
+
+.scheme-link {
+  display: inline-block;
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: color 0.3s;
+}
+
+.scheme-link:hover {
+  color: #7b1fa2;
+}
+
+.categories-section,
+.subcategories-section {
+  margin-top: 1rem;
+}
+
+.categories-list,
+.subcategories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.category-chip,
+.subcategory-chip {
+  background: #f3e5f5;
+  color: #9b59b6;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #e1bee7;
+}
+
+.no-schemes {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.listing-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .agent-response {
+    padding: 1rem;
+  }
+
+  .response-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-value {
+    font-size: 2rem;
+  }
+
+  .buyer-header {
+    flex-direction: column;
+  }
+
+  .scheme-header {
+    flex-direction: column;
+  }
+}
+

@@ -1,13 +1,23 @@
 [
   {
-    "user_input": "Govt scheme",
-    "final_response": "I\u2019m happy to help you find the right government schemes for your farm.  \nBecause I don\u2019t yet have the specific details from the scheme\u2011agent, I\u2019ll give you a quick snapshot of the most common schemes that farmers in India can usually access, and then ask a few questions so we can narrow it down to the ones that apply to you.\n\n---\n\n## Quick Overview of Popular Central Schemes for Farmers\n\n| Scheme | What it Covers | Typical Eligibility |\n|--------|----------------|---------------------|\n| **Pradhan Mantri Fasal Bima Yojana (PMFBY)** | Crop insurance for most major crops (wheat, rice, pulses, oilseeds, etc.) | Landholders, sharecroppers, and contract farmers with a minimum of 0.5\u202fha of land |\n| **Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)** | Direct income support of \u20b96000 per year (\u20b92000 per quarter) | Farmers owning or leasing land of any size, with a minimum of 1\u202fha of land (or 0.5\u202fha for marginal farmers) |\n| **Pradhan Mantri Krishi Sinchai Yojana (PMKSY)** | Irrigation development and water\u2011saving technologies | Farmers with irrigation facilities or those who can install drip/soaker systems |\n| **National Agriculture Insurance Scheme (NAIS)** | Insurance for crops, livestock, and fisheries | Farmers with land or livestock assets |\n| **Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)** | Employment generation for rural households | Rural households (including farmers) that meet the 100\u202fha land\u2011holding limit |\n\n> **Tip:** Most of these schemes are *central* and apply to all states, but some states run additional *state\u2011specific* schemes (e.g., crop\u2011specific subsidies, credit guarantees, or local extension services).  \n\n---\n\n## What We Need to Pinpoint the Best Schemes for You\n\n1. **State / Region** \u2013 Some schemes have state\u2011level variations or additional benefits.  \n2. **Primary Crop(s)** \u2013 Certain schemes target specific crops (e.g., sugarcane, cotton, horticulture).  \n3. **Landholding Size** \u2013 Determines eligibility for many schemes (e.g., PM-KISAN, NAIS).  \n4. **Current Challenges** \u2013 Are you looking for crop insurance, financial support, irrigation, or market access?  \n\nOnce you share this information, I can pull the exact scheme list (including central vs. state schemes, eligibility criteria, and links) and give you a step\u2011by\u2011step action plan.\n\n---\n\n### Next Steps\n\n- **Reply with**:  \n  - Your state or district  \n  - The main crop(s) you grow  \n  - Your landholding size (in hectares or acres)  \n  - Any specific issue you\u2019re facing (e.g., crop loss, lack of irrigation, need for credit)\n\n- **I\u2019ll then**:  \n  - List the top 3 schemes that match your profile  \n  - Provide eligibility questions and benefits  \n  - Offer links to official portals or local offices where you can apply\n\nFeel free to add any other details you think might help (e.g., whether you\u2019re a smallholder, a sharecropper, or a commercial farmer). Looking forward to helping you secure the support you deserve!",
-    "timestamp": "2026-01-04T14:22:18.962130",
+    "user_input": "I need scheme",
+    "final_response": "**Available sub\u2011categories for all states**\n\n1. **Financial assistance** \u2013 325 schemes (Central\u202f/\u202fState)  \n2. **Agricultural Inputs\u2011 seeds, fertilizer etc.** \u2013 160 schemes (Central\u202f/\u202fState)  \n3. **Animal husbandry** \u2013 139 schemes (Central\u202f/\u202fState)  \n4. **Fishing and hunting** \u2013 136 schemes (Central\u202f/\u202fState)  \n5. **Mechanization\u2011 solar power, farming systems** \u2013 89 schemes (Central\u202f/\u202fState)  \n6. **Land and water resources** \u2013 76 schemes (Central\u202f/\u202fState)  \n7. **Entrepreneurship development** \u2013 48 schemes (Central\u202f/\u202fState)  \n8. **Rural services** \u2013 21 schemes (Central\u202f/\u202fState)  \n9. **Loan** \u2013 20 schemes (State)  \n10. **Environmental management and protection** \u2013 20 schemes (Central\u202f/\u202fState)  \n11. **Setting up / start\u2011up / entrepreneurship** \u2013 19 schemes (Central\u202f/\u202fState)  \n12. **Soil health** \u2013 17 schemes (Central\u202f/\u202fState)  \n13. **Insurance** \u2013 12 schemes (Central\u202f/\u202fState)  \n14. **Training and Skill Up\u2011gradation** \u2013 10 schemes (Central\u202f/\u202fState)  \n15. **Crisis/Disaster/Accident** \u2013 10 schemes (Central\u202f/\u202fState)  \n16. **Banking and money** \u2013 8 schemes (Central\u202f/\u202fState)  \n17. **Wildlife and biodiversity** \u2013 8 schemes (State)  \n18. **Environmental grants** \u2013 7 schemes (State)  \n19. **Climate change** \u2013 6 schemes (Central\u202f/\u202fState)  \n20. **Employment services and jobs** \u2013 5 schemes (Central\u202f/\u202fState)  \n21. **Electricity** \u2013 5 schemes (State)  \n22. **Public transport and private vehicles** \u2013 5 schemes (State)  \n23. **Roads and road transport** \u2013 5 schemes (Central\u202f/\u202fState)  \n24. **Citizen empowerment** \u2013 5 schemes (Central\u202f/\u202fState)  \n25. **Food Security / Public Distribution System** \u2013 4 schemes (State)  \n26. **Pollution and waste management** \u2013 4 schemes (Central\u202f/\u202fState)  \n27. **Infrastructure** \u2013 4 schemes (Central\u202f/\u202fState)  \n28. **Exhibitions/Trade fairs/Buyer\u2011seller meet, market development** \u2013 3 schemes (State)  \n29. **Pension** \u2013 3 schemes (State)  \n30. **Housing** \u2013 2 schemes (Central\u202f/\u202fState)  \n31. **Scholarships and student finance** \u2013 2 schemes (Central\u202f/\u202fState)  \n32. **Disease and conditions** \u2013 2 schemes (State)  \n33. **Weather** \u2013 2 schemes (State)  \n34. **Local services** \u2013 2 schemes (State)  \n35. **Water supply** \u2013 2 schemes (State)  \n36. **Aids/Appliances** \u2013 2 schemes (State)  \n37. **Solid waste management** \u2013 2 schemes (Central\u202f/\u202fState)  \n38. **Sanitation / Sewage** \u2013 2 schemes (Central\u202f/\u202fState)  \n39. **Financial regulation** \u2013 1 scheme (State)  \n40. **Personal finance** \u2013 1 scheme (State)  \n41. **Shelter, integrated support and assistance** \u2013 1 scheme (State)  \n42. **Slum Rehabilitation/Redevelopment** \u2013 1 scheme (State)  \n43. **Universities and higher education** \u2013 1 scheme (State)  \n44. **Coaching** \u2013 1 scheme (State)  \n45. **Education and training grants, fellowship, stipend** \u2013 1 scheme (Central)  \n46. **Academic qualification Up\u2011Gradation** \u2013 1 scheme (Central)  \n47. **Vocational education** \u2013 1 scheme (Central)  \n48. **Internship** \u2013 1 scheme (Central)  \n49. **Credit Linked Subsidy** \u2013 1 scheme (Central)  \n50. **Health Insurance** \u2013 1 scheme (State)  \n51. **Investment** \u2013 1 scheme (Central)  \n52. **Annuity** \u2013 1 scheme (Central)  \n53. **Rehabilitation** \u2013 1 scheme (Central)  \n54. **Welfare measures** \u2013 1 scheme (Central)  \n55. **Shelter** \u2013 1 scheme (Central)  \n56. **Waste and environmental impact** \u2013 1 scheme (State)  \n57. **Technology upgradation** \u2013 1 scheme (State)\n\n---\n\n### What to do next?\n\n1. **Pick a sub\u2011category** that best matches your current need (e.g., \u201cFinancial assistance\u201d if you\u2019re looking for loans or subsidies, or \u201cAgricultural Inputs\u201d if you need seed/fertilizer support).  \n2. Once you\u2019ve chosen, let me know the sub\u2011category name, and I\u2019ll fetch the top 10 schemes under that category, including eligibility hints, key benefits, and application links.  \n3. If you\u2019re unsure, I can also suggest the most popular or widely applicable sub\u2011categories for farmers in your region.\n\nFeel free to ask for more details or clarification on any of the sub\u2011categories!",
+    "timestamp": "2026-02-04T09:08:57.003518",
     "execution_log": [
       {
         "node": "reasoner",
-        "input": "Govt scheme",
+        "input": {
+          "user_input": "I need scheme",
+          "image_path": null
+        },
         "output": {
+          "intent": [
+            "scheme"
+          ],
+          "crop": null,
+          "agents_to_trigger": [
+            "scheme_agent"
+          ],
           "reasoner_output": {
             "intent": [
               "scheme"
@@ -18,25 +28,1352 @@
               "scheme_agent"
             ]
           },
-          "user_input": "Govt scheme",
+          "user_input": "I need scheme",
           "next_nodes": [
             "scheme_agent"
           ]
         },
-        "timestamp": "2026-01-04T14:22:17.022643"
+        "timestamp": "2026-02-04T09:08:54.353046"
+      },
+      {
+        "node": "scheme_agent",
+        "input": {
+          "user_input": "I need scheme",
+          "state": null
+        },
+        "output": {
+          "subcategories_info": {
+            "state": "All",
+            "total_subcategories": 57,
+            "sub_categories": [
+              {
+                "name": "Financial assistance",
+                "count": 325,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Agricultural Inputs- seeds, fertilizer etc.",
+                "count": 160,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Animal husbandry",
+                "count": 139,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Fishing and hunting",
+                "count": 136,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Mechanization- solar power, farming systems",
+                "count": 89,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Land and water resources",
+                "count": 76,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Entrepreneurship development",
+                "count": 48,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Rural services",
+                "count": 21,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Loan",
+                "count": 20,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Environmental management and protection",
+                "count": 20,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Setting up / start-up / entrepreneurship",
+                "count": 19,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Soil health",
+                "count": 17,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Insurance",
+                "count": 12,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Training and Skill Up-gradation",
+                "count": 10,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Crisis/Disaster/Accident",
+                "count": 10,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Banking and money",
+                "count": 8,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Wildlife and biodiversity",
+                "count": 8,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Environmental grants",
+                "count": 7,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Climate change",
+                "count": 6,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Employment services and jobs",
+                "count": 5,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Electricity",
+                "count": 5,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Public transport and private vehicles",
+                "count": 5,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Roads and road transport",
+                "count": 5,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Citizen empowerment",
+                "count": 5,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Food Security / Public Distribution System",
+                "count": 4,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Pollution and waste management",
+                "count": 4,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Infrastructure",
+                "count": 4,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Exhibitions/Trade fairs/Buyer-seller meet, market development",
+                "count": 3,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Pension",
+                "count": 3,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Housing",
+                "count": 2,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Scholarships and student finance",
+                "count": 2,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Disease and conditions",
+                "count": 2,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Weather",
+                "count": 2,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Local services",
+                "count": 2,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Water supply",
+                "count": 2,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Aids/Appliances",
+                "count": 2,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Solid waste management",
+                "count": 2,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Sanitation / Sewage",
+                "count": 2,
+                "scheme_types": [
+                  "Central",
+                  "State"
+                ]
+              },
+              {
+                "name": "Financial regulation",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Personal finance",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Shelter, integrated support and assistance",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Slum Rehabilitation/Redevelopment",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Universities and higher education",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Coaching",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Education and training grants, fellowship, stipend",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Academic qualification Up-Gradation",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Voctional education",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Internship",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Credit Linked Subsidy",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Health Insurance",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Investment",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Annuity",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Rehabilitation",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Welfare measures",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Shelter",
+                "count": 1,
+                "scheme_types": [
+                  "Central"
+                ]
+              },
+              {
+                "name": "Waste and environmental impact",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              },
+              {
+                "name": "Technology upgradation",
+                "count": 1,
+                "scheme_types": [
+                  "State"
+                ]
+              }
+            ]
+          },
+          "search_params": {
+            "state": "",
+            "category": "",
+            "scheme_scope": "all"
+          },
+          "agent": "scheme_agent",
+          "response_type": "subcategories"
+        },
+        "timestamp": "2026-02-04T09:08:54.924072"
       },
       {
         "node": "coordinator",
         "input": {
-          "user_input": "Govt scheme",
-          "agent_outputs": []
+          "user_input": "I need scheme",
+          "agent_outputs": [
+            {
+              "subcategories_info": {
+                "state": "All",
+                "total_subcategories": 57,
+                "sub_categories": [
+                  {
+                    "name": "Financial assistance",
+                    "count": 325,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Agricultural Inputs- seeds, fertilizer etc.",
+                    "count": 160,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Animal husbandry",
+                    "count": 139,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Fishing and hunting",
+                    "count": 136,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Mechanization- solar power, farming systems",
+                    "count": 89,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Land and water resources",
+                    "count": 76,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Entrepreneurship development",
+                    "count": 48,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Rural services",
+                    "count": 21,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Loan",
+                    "count": 20,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Environmental management and protection",
+                    "count": 20,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Setting up / start-up / entrepreneurship",
+                    "count": 19,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Soil health",
+                    "count": 17,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Insurance",
+                    "count": 12,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Training and Skill Up-gradation",
+                    "count": 10,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Crisis/Disaster/Accident",
+                    "count": 10,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Banking and money",
+                    "count": 8,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Wildlife and biodiversity",
+                    "count": 8,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Environmental grants",
+                    "count": 7,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Climate change",
+                    "count": 6,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Employment services and jobs",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Electricity",
+                    "count": 5,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Public transport and private vehicles",
+                    "count": 5,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Roads and road transport",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Citizen empowerment",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Food Security / Public Distribution System",
+                    "count": 4,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Pollution and waste management",
+                    "count": 4,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Infrastructure",
+                    "count": 4,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Exhibitions/Trade fairs/Buyer-seller meet, market development",
+                    "count": 3,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Pension",
+                    "count": 3,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Housing",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Scholarships and student finance",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Disease and conditions",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Weather",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Local services",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Water supply",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Aids/Appliances",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Solid waste management",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Sanitation / Sewage",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Financial regulation",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Personal finance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Shelter, integrated support and assistance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Slum Rehabilitation/Redevelopment",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Universities and higher education",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Coaching",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Education and training grants, fellowship, stipend",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Academic qualification Up-Gradation",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Voctional education",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Internship",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Credit Linked Subsidy",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Health Insurance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Investment",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Annuity",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Rehabilitation",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Welfare measures",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Shelter",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Waste and environmental impact",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Technology upgradation",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  }
+                ]
+              },
+              "search_params": {
+                "state": "",
+                "category": "",
+                "scheme_scope": "all"
+              },
+              "agent": "scheme_agent",
+              "response_type": "subcategories"
+            }
+          ]
         },
         "output": {
-          "final_response": "I\u2019m happy to help you find the right government schemes for your farm.  \nBecause I don\u2019t yet have the specific details from the scheme\u2011agent, I\u2019ll give you a quick snapshot of the most common schemes that farmers in India can usually access, and then ask a few questions so we can narrow it down to the ones that apply to you.\n\n---\n\n## Quick Overview of Popular Central Schemes for Farmers\n\n| Scheme | What it Covers | Typical Eligibility |\n|--------|----------------|---------------------|\n| **Pradhan Mantri Fasal Bima Yojana (PMFBY)** | Crop insurance for most major crops (wheat, rice, pulses, oilseeds, etc.) | Landholders, sharecroppers, and contract farmers with a minimum of 0.5\u202fha of land |\n| **Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)** | Direct income support of \u20b96000 per year (\u20b92000 per quarter) | Farmers owning or leasing land of any size, with a minimum of 1\u202fha of land (or 0.5\u202fha for marginal farmers) |\n| **Pradhan Mantri Krishi Sinchai Yojana (PMKSY)** | Irrigation development and water\u2011saving technologies | Farmers with irrigation facilities or those who can install drip/soaker systems |\n| **National Agriculture Insurance Scheme (NAIS)** | Insurance for crops, livestock, and fisheries | Farmers with land or livestock assets |\n| **Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)** | Employment generation for rural households | Rural households (including farmers) that meet the 100\u202fha land\u2011holding limit |\n\n> **Tip:** Most of these schemes are *central* and apply to all states, but some states run additional *state\u2011specific* schemes (e.g., crop\u2011specific subsidies, credit guarantees, or local extension services).  \n\n---\n\n## What We Need to Pinpoint the Best Schemes for You\n\n1. **State / Region** \u2013 Some schemes have state\u2011level variations or additional benefits.  \n2. **Primary Crop(s)** \u2013 Certain schemes target specific crops (e.g., sugarcane, cotton, horticulture).  \n3. **Landholding Size** \u2013 Determines eligibility for many schemes (e.g., PM-KISAN, NAIS).  \n4. **Current Challenges** \u2013 Are you looking for crop insurance, financial support, irrigation, or market access?  \n\nOnce you share this information, I can pull the exact scheme list (including central vs. state schemes, eligibility criteria, and links) and give you a step\u2011by\u2011step action plan.\n\n---\n\n### Next Steps\n\n- **Reply with**:  \n  - Your state or district  \n  - The main crop(s) you grow  \n  - Your landholding size (in hectares or acres)  \n  - Any specific issue you\u2019re facing (e.g., crop loss, lack of irrigation, need for credit)\n\n- **I\u2019ll then**:  \n  - List the top 3 schemes that match your profile  \n  - Provide eligibility questions and benefits  \n  - Offer links to official portals or local offices where you can apply\n\nFeel free to add any other details you think might help (e.g., whether you\u2019re a smallholder, a sharecropper, or a commercial farmer). Looking forward to helping you secure the support you deserve!",
-          "agent_outputs": [],
+          "final_response": "**Available sub\u2011categories for all states**\n\n1. **Financial assistance** \u2013 325 schemes (Central\u202f/\u202fState)  \n2. **Agricultural Inputs\u2011 seeds, fertilizer etc.** \u2013 160 schemes (Central\u202f/\u202fState)  \n3. **Animal husbandry** \u2013 139 schemes (Central\u202f/\u202fState)  \n4. **Fishing and hunting** \u2013 136 schemes (Central\u202f/\u202fState)  \n5. **Mechanization\u2011 solar power, farming systems** \u2013 89 schemes (Central\u202f/\u202fState)  \n6. **Land and water resources** \u2013 76 schemes (Central\u202f/\u202fState)  \n7. **Entrepreneurship development** \u2013 48 schemes (Central\u202f/\u202fState)  \n8. **Rural services** \u2013 21 schemes (Central\u202f/\u202fState)  \n9. **Loan** \u2013 20 schemes (State)  \n10. **Environmental management and protection** \u2013 20 schemes (Central\u202f/\u202fState)  \n11. **Setting up / start\u2011up / entrepreneurship** \u2013 19 schemes (Central\u202f/\u202fState)  \n12. **Soil health** \u2013 17 schemes (Central\u202f/\u202fState)  \n13. **Insurance** \u2013 12 schemes (Central\u202f/\u202fState)  \n14. **Training and Skill Up\u2011gradation** \u2013 10 schemes (Central\u202f/\u202fState)  \n15. **Crisis/Disaster/Accident** \u2013 10 schemes (Central\u202f/\u202fState)  \n16. **Banking and money** \u2013 8 schemes (Central\u202f/\u202fState)  \n17. **Wildlife and biodiversity** \u2013 8 schemes (State)  \n18. **Environmental grants** \u2013 7 schemes (State)  \n19. **Climate change** \u2013 6 schemes (Central\u202f/\u202fState)  \n20. **Employment services and jobs** \u2013 5 schemes (Central\u202f/\u202fState)  \n21. **Electricity** \u2013 5 schemes (State)  \n22. **Public transport and private vehicles** \u2013 5 schemes (State)  \n23. **Roads and road transport** \u2013 5 schemes (Central\u202f/\u202fState)  \n24. **Citizen empowerment** \u2013 5 schemes (Central\u202f/\u202fState)  \n25. **Food Security / Public Distribution System** \u2013 4 schemes (State)  \n26. **Pollution and waste management** \u2013 4 schemes (Central\u202f/\u202fState)  \n27. **Infrastructure** \u2013 4 schemes (Central\u202f/\u202fState)  \n28. **Exhibitions/Trade fairs/Buyer\u2011seller meet, market development** \u2013 3 schemes (State)  \n29. **Pension** \u2013 3 schemes (State)  \n30. **Housing** \u2013 2 schemes (Central\u202f/\u202fState)  \n31. **Scholarships and student finance** \u2013 2 schemes (Central\u202f/\u202fState)  \n32. **Disease and conditions** \u2013 2 schemes (State)  \n33. **Weather** \u2013 2 schemes (State)  \n34. **Local services** \u2013 2 schemes (State)  \n35. **Water supply** \u2013 2 schemes (State)  \n36. **Aids/Appliances** \u2013 2 schemes (State)  \n37. **Solid waste management** \u2013 2 schemes (Central\u202f/\u202fState)  \n38. **Sanitation / Sewage** \u2013 2 schemes (Central\u202f/\u202fState)  \n39. **Financial regulation** \u2013 1 scheme (State)  \n40. **Personal finance** \u2013 1 scheme (State)  \n41. **Shelter, integrated support and assistance** \u2013 1 scheme (State)  \n42. **Slum Rehabilitation/Redevelopment** \u2013 1 scheme (State)  \n43. **Universities and higher education** \u2013 1 scheme (State)  \n44. **Coaching** \u2013 1 scheme (State)  \n45. **Education and training grants, fellowship, stipend** \u2013 1 scheme (Central)  \n46. **Academic qualification Up\u2011Gradation** \u2013 1 scheme (Central)  \n47. **Vocational education** \u2013 1 scheme (Central)  \n48. **Internship** \u2013 1 scheme (Central)  \n49. **Credit Linked Subsidy** \u2013 1 scheme (Central)  \n50. **Health Insurance** \u2013 1 scheme (State)  \n51. **Investment** \u2013 1 scheme (Central)  \n52. **Annuity** \u2013 1 scheme (Central)  \n53. **Rehabilitation** \u2013 1 scheme (Central)  \n54. **Welfare measures** \u2013 1 scheme (Central)  \n55. **Shelter** \u2013 1 scheme (Central)  \n56. **Waste and environmental impact** \u2013 1 scheme (State)  \n57. **Technology upgradation** \u2013 1 scheme (State)\n\n---\n\n### What to do next?\n\n1. **Pick a sub\u2011category** that best matches your current need (e.g., \u201cFinancial assistance\u201d if you\u2019re looking for loans or subsidies, or \u201cAgricultural Inputs\u201d if you need seed/fertilizer support).  \n2. Once you\u2019ve chosen, let me know the sub\u2011category name, and I\u2019ll fetch the top 10 schemes under that category, including eligibility hints, key benefits, and application links.  \n3. If you\u2019re unsure, I can also suggest the most popular or widely applicable sub\u2011categories for farmers in your region.\n\nFeel free to ask for more details or clarification on any of the sub\u2011categories!",
+          "agent_outputs": [
+            {
+              "subcategories_info": {
+                "state": "All",
+                "total_subcategories": 57,
+                "sub_categories": [
+                  {
+                    "name": "Financial assistance",
+                    "count": 325,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Agricultural Inputs- seeds, fertilizer etc.",
+                    "count": 160,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Animal husbandry",
+                    "count": 139,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Fishing and hunting",
+                    "count": 136,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Mechanization- solar power, farming systems",
+                    "count": 89,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Land and water resources",
+                    "count": 76,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Entrepreneurship development",
+                    "count": 48,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Rural services",
+                    "count": 21,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Loan",
+                    "count": 20,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Environmental management and protection",
+                    "count": 20,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Setting up / start-up / entrepreneurship",
+                    "count": 19,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Soil health",
+                    "count": 17,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Insurance",
+                    "count": 12,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Training and Skill Up-gradation",
+                    "count": 10,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Crisis/Disaster/Accident",
+                    "count": 10,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Banking and money",
+                    "count": 8,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Wildlife and biodiversity",
+                    "count": 8,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Environmental grants",
+                    "count": 7,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Climate change",
+                    "count": 6,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Employment services and jobs",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Electricity",
+                    "count": 5,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Public transport and private vehicles",
+                    "count": 5,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Roads and road transport",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Citizen empowerment",
+                    "count": 5,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Food Security / Public Distribution System",
+                    "count": 4,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Pollution and waste management",
+                    "count": 4,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Infrastructure",
+                    "count": 4,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Exhibitions/Trade fairs/Buyer-seller meet, market development",
+                    "count": 3,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Pension",
+                    "count": 3,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Housing",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Scholarships and student finance",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Disease and conditions",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Weather",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Local services",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Water supply",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Aids/Appliances",
+                    "count": 2,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Solid waste management",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Sanitation / Sewage",
+                    "count": 2,
+                    "scheme_types": [
+                      "Central",
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Financial regulation",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Personal finance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Shelter, integrated support and assistance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Slum Rehabilitation/Redevelopment",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Universities and higher education",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Coaching",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Education and training grants, fellowship, stipend",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Academic qualification Up-Gradation",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Voctional education",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Internship",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Credit Linked Subsidy",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Health Insurance",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Investment",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Annuity",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Rehabilitation",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Welfare measures",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Shelter",
+                    "count": 1,
+                    "scheme_types": [
+                      "Central"
+                    ]
+                  },
+                  {
+                    "name": "Waste and environmental impact",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  },
+                  {
+                    "name": "Technology upgradation",
+                    "count": 1,
+                    "scheme_types": [
+                      "State"
+                    ]
+                  }
+                ]
+              },
+              "search_params": {
+                "state": "",
+                "category": "",
+                "scheme_scope": "all"
+              },
+              "agent": "scheme_agent",
+              "response_type": "subcategories"
+            }
+          ],
           "agent": "coordinator"
         },
-        "timestamp": "2026-01-04T14:22:18.962130"
+        "timestamp": "2026-02-04T09:08:57.003518"
       }
     ]
   }

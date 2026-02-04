@@ -1,0 +1,231 @@
+.buyer-match-display {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.match-header {
+  margin-bottom: 2rem;
+}
+
+.match-header h2 {
+  margin: 0.5rem 0;
+  color: #2d8659;
+}
+
+.match-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.buyer-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.buyer-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.buyer-card:hover {
+  border-color: #2d8659;
+  box-shadow: 0 4px 12px rgba(45, 134, 89, 0.15);
+  transform: translateY(-2px);
+}
+
+.buyer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.buyer-header h3 {
+  margin: 0;
+  color: #2d8659;
+  font-size: 1.25rem;
+}
+
+.location {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.buyer-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.detail-row .label {
+  font-weight: 500;
+  color: #666;
+}
+
+.detail-row .value {
+  color: #333;
+  font-weight: 600;
+}
+
+.ai-suggestion {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f9f5;
+  border-left: 4px solid #2d8659;
+  border-radius: 6px;
+}
+
+.ai-price {
+  color: #2d8659;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.ai-price.no-match {
+  color: #f57c00;
+}
+
+.explanation-box {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.explanation-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.explanation-box p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.breakdown {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.buyer-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-button.accept {
+  background: #4caf50;
+  color: white;
+}
+
+.action-button.accept:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.action-button.counter {
+  background: #ff9800;
+  color: white;
+}
+
+.action-button.counter:hover:not(:disabled) {
+  background: #f57c00;
+}
+
+.action-button.reject {
+  background: #f44336;
+  color: white;
+}
+
+.action-button.reject:hover:not(:disabled) {
+  background: #d32f2f;
+}
+
+.action-button.negotiate {
+  background: #2d8659;
+  color: white;
+  border-color: #2d8659;
+  width: 100%;
+}
+
+.action-button.negotiate:hover:not(:disabled) {
+  background: #1e5a3a;
+}
+
+.negotiate-prompt {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  color: #856404;
+  text-align: center;
+  font-style: italic;
+}
+
+.accepted-badge {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #d4edda;
+  border: 1px solid #28a745;
+  border-radius: 6px;
+  color: #155724;
+  text-align: center;
+  font-weight: 600;
+}
+
+.no-matches {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-matches p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .buyer-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyer-actions {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+}
