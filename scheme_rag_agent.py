@@ -671,7 +671,7 @@ class SchemeRAGAgent:
         query_text = " ".join(query_parts) if query_parts else "government agricultural schemes"
         
         # Vector search
-        vector_results = self.vector_store.search(query_text, top_k=top_k * 2)  # Get more for filtering
+        vector_results = self.vector_store.search(query_text, top_k=top_k * 10)  # Get significantly more for filtering
         
         # Filter by metadata
         filtered_schemes = []

@@ -1,0 +1,71 @@
+/* Summary & Recommendations Card (Scheme Agent) */
+.summary-recommendations-card {
+    background-color: #fce4ec;
+    /* Light Pink */
+    border: 1px solid #f8bbd0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.summary-recommendations-card h3 {
+    margin-top: 0;
+    color: #880e4f;
+    /* Dark Pink/Red */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summary-text-content {
+    white-space: pre-wrap;
+    /* Preserve line breaks */
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Audio Controls Container */
+.audio-controls-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #f8bbd0;
+}
+
+.btn-audio-action {
+    background: white;
+    border: 1px solid #ff80ab;
+    color: #c51162;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-audio-action:hover {
+    background: #fce4ec;
+    transform: translateY(-1px);
+}
+
+.btn-audio-action.active {
+    background: #c51162;
+    color: white;
+}
+
+.btn-audio-action:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #999;
+}

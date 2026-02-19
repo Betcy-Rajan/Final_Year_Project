@@ -21,7 +21,7 @@ function App() {
 
     try {
       let result;
-      
+
       if (imageFile) {
         // Handle query with image
         const formData = new FormData();
@@ -61,7 +61,7 @@ function App() {
       console.log('🔍 Price Output:', result.price_agent_output);
       console.log('🔍 Scheme Output:', result.scheme_agent_output);
       console.log('🔍 Buyer Connect Output:', result.buyer_connect_agent_output);
-      
+
       setResponse(result);
     } catch (err) {
       console.error('Error processing query:', err);
@@ -117,7 +117,7 @@ function App() {
             {error}
           </div>
         )}
-        {response && <ResponseDisplay response={response} />}
+        {response && <ResponseDisplay response={response} onQuery={handleQuery} />}
       </div>
     </div>
   );

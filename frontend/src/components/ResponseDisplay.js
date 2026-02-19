@@ -5,7 +5,7 @@ import PriceResponse from './agent-responses/PriceResponse';
 import BuyerConnectResponse from './agent-responses/BuyerConnectResponse';
 import SchemeResponse from './agent-responses/SchemeResponse';
 
-function ResponseDisplay({ response }) {
+function ResponseDisplay({ response, onQuery }) {
   if (!response) return null;
 
   // Debug: Log what we received
@@ -24,7 +24,7 @@ function ResponseDisplay({ response }) {
   const coordinatorOutput = response.coordinator_output;
   const finalResponse = response.final_response;
   const reasonerOutput = response.reasoner_output;
-  
+
   // Check if reasoner_output is nested
   let intent = [];
   if (reasonerOutput) {
@@ -71,7 +71,10 @@ function ResponseDisplay({ response }) {
 
       <div className="agent-responses">
         {diseaseOutput && (
-          <DiseaseResponse output={diseaseOutput} />
+          <DiseaseResponse
+            output={diseaseOutput}
+            finalMarkdown={finalResponse}
+          />
         )}
 
         {priceOutput && (
@@ -83,11 +86,16 @@ function ResponseDisplay({ response }) {
         )}
 
         {schemeOutput && (
-          <SchemeResponse output={schemeOutput} />
+          <SchemeResponse
+            output={schemeOutput}
+            onQuery={onQuery}
+            finalMarkdown={finalResponse}
+          />
         )}
       </div>
 
-      {finalResponse && (
+      {/* Show Final Response ONLY if not handled by detailed Agent Component */}
+      {finalResponse && !diseaseOutput && !schemeOutput && (
         <div className="final-response">
           <h3 className="final-response-title">
             <span className="title-icon">💡</span>
@@ -106,8 +114,8 @@ function ResponseDisplay({ response }) {
             Response
           </h3>
           <div className="final-response-content">
-            {typeof coordinatorOutput === 'string' 
-              ? coordinatorOutput 
+            {typeof coordinatorOutput === 'string'
+              ? coordinatorOutput
               : JSON.stringify(coordinatorOutput, null, 2)}
           </div>
         </div>

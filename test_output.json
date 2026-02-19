@@ -1,0 +1,289 @@
+{
+  "state": "Central Only",
+  "Central Schemes": {
+    "Agricultural Inputs- seeds, fertilizer etc.": 14,
+    "Land and water resources": 2,
+    "Financial assistance": 21,
+    "Insurance": 4,
+    "Climate change": 1,
+    "Environmental management and protection": 1,
+    "Education and training grants, fellowship, stipend": 1,
+    "Scholarships and student finance": 1,
+    "Animal husbandry": 8,
+    "Rural services": 4,
+    "Employment services and jobs": 1,
+    "Training and Skill Up-gradation": 1,
+    "Academic qualification Up-Gradation": 1,
+    "Voctional education": 1,
+    "Internship": 1,
+    "Soil health": 2,
+    "Setting up / start-up / entrepreneurship": 3,
+    "Fishing and hunting": 1,
+    "Banking and money": 1,
+    "Credit Linked Subsidy": 1,
+    "Citizen empowerment": 2,
+    "Entrepreneurship development": 2,
+    "Investment": 1,
+    "Annuity": 1,
+    "Housing": 1,
+    "Rehabilitation": 1,
+    "Welfare measures": 1,
+    "Crisis/Disaster/Accident": 1,
+    "Shelter": 1,
+    "Infrastructure": 1,
+    "Roads and road transport": 1,
+    "Solid waste management": 1,
+    "Sanitation / Sewage": 1,
+    "Pollution and waste management": 1,
+    "Mechanization- solar power, farming systems": 1
+  },
+  "State Schemes": {},
+  "sub_categories": [
+    {
+      "name": "Financial assistance",
+      "count": 21,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Agricultural Inputs- seeds, fertilizer etc.",
+      "count": 14,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Animal husbandry",
+      "count": 8,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Insurance",
+      "count": 4,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Rural services",
+      "count": 4,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Setting up / start-up / entrepreneurship",
+      "count": 3,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Land and water resources",
+      "count": 2,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Soil health",
+      "count": 2,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Citizen empowerment",
+      "count": 2,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Entrepreneurship development",
+      "count": 2,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Climate change",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Environmental management and protection",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Education and training grants, fellowship, stipend",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Scholarships and student finance",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Employment services and jobs",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Training and Skill Up-gradation",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Academic qualification Up-Gradation",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Voctional education",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Internship",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Fishing and hunting",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Banking and money",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Credit Linked Subsidy",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Investment",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Annuity",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Housing",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Rehabilitation",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Welfare measures",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Crisis/Disaster/Accident",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Shelter",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Roads and road transport",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Solid waste management",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Sanitation / Sewage",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Pollution and waste management",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    },
+    {
+      "name": "Mechanization- solar power, farming systems",
+      "count": 1,
+      "scheme_types": [
+        "Central"
+      ]
+    }
+  ],
+  "total_subcategories": 35
+}

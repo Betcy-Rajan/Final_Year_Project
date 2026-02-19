@@ -1,7 +1,12 @@
 [
   {
     "disease_name": "Late Blight",
-    "symptoms": ["dark spots on leaves", "white mold", "wilting", "brown patches"],
+    "symptoms": [
+      "dark spots on leaves",
+      "white mold",
+      "wilting",
+      "brown patches"
+    ],
     "remedy_name": "Copper Fungicide Treatment",
     "steps": [
       "Remove and destroy infected plant parts",
@@ -15,7 +20,12 @@
   },
   {
     "disease_name": "Powdery Mildew",
-    "symptoms": ["white powdery coating", "yellowing leaves", "stunted growth", "leaf curling"],
+    "symptoms": [
+      "white powdery coating",
+      "yellowing leaves",
+      "stunted growth",
+      "leaf curling"
+    ],
     "remedy_name": "Sulfur Spray Treatment",
     "steps": [
       "Mix 1 tablespoon sulfur powder with 1 gallon water",
@@ -29,7 +39,12 @@
   },
   {
     "disease_name": "Bacterial Leaf Spot",
-    "symptoms": ["small dark spots", "yellowing around spots", "leaf drop", "water-soaked lesions"],
+    "symptoms": [
+      "small dark spots",
+      "yellowing around spots",
+      "leaf drop",
+      "water-soaked lesions"
+    ],
     "remedy_name": "Bacterial Control Treatment",
     "steps": [
       "Remove infected leaves immediately",
@@ -43,7 +58,12 @@
   },
   {
     "disease_name": "Root Rot",
-    "symptoms": ["wilting despite adequate water", "yellowing leaves", "stunted growth", "brown roots"],
+    "symptoms": [
+      "wilting despite adequate water",
+      "yellowing leaves",
+      "stunted growth",
+      "brown roots"
+    ],
     "remedy_name": "Root Rot Recovery Treatment",
     "steps": [
       "Improve soil drainage immediately",
@@ -57,7 +77,12 @@
   },
   {
     "disease_name": "Aphid Infestation",
-    "symptoms": ["sticky honeydew", "curled leaves", "stunted growth", "visible small insects"],
+    "symptoms": [
+      "sticky honeydew",
+      "curled leaves",
+      "stunted growth",
+      "visible small insects"
+    ],
     "remedy_name": "Natural Aphid Control",
     "steps": [
       "Spray with neem oil solution (2 tbsp per gallon)",

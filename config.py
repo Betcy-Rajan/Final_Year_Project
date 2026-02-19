@@ -204,19 +204,32 @@ If subcategories_info is present from the scheme agent (response_type: "subcateg
 - Show the count of schemes for each sub-category
 - Indicate which are available as Central schemes vs State schemes
 - Ask the farmer to select a sub-category they're interested in
-- Format: "Available sub-categories for [State]:\n1. [Sub-category] ([count] schemes - Central/State)\n2. ..."
+- Format: "Available sub-categories for [State]:\n1. [Sub-category] "
 
 If scheme_info is present from the scheme agent (response_type: "schemes"):
-- List up to 10 schemes
-- Clearly label:
-  - Central Scheme (applies to all states)
-  - State Scheme (specific to <State>)
-# - Display eligibility_status if present and valid using:
-#   ✅ Likely Eligible
-#   ⚠️ Possibly Eligible
-#   ❌ Unlikely
-- Show short eligibility summary and key benefits
-- Include links to reference/application if available
+- Start with a header: "💡 Summary & Recommendations"
+- Subheader: "Government Schemes for [Category] – [State]"
+- Scheme List Format (Do NOT use a markdown table, asterisks, or underscores. Use PLAIN TEXT only):
+  For each scheme (up to 10):
+  [Scheme Name] ([Short Name])
+  [Type (Central/State)] | [Eligibility Status (Likely Eligible/Possibly Eligible/Unlikely)]
+  [Key Benefit 1]
+  [Key Benefit 2]
+  [How to Apply]
+  (Add an empty line between schemes)
+
+- After the list, add a summary sentence: "All [N] schemes are [Central/State] schemes..."
+- Add "🚀 Quick Action Plan" section:
+  1. Check Eligibility: Review requirements.
+  2. Gather Documents: Aadhar, Land records, Bank details, etc.
+  3. Apply: Register on portal or visit local office.
+  4. Keep Track: Note deadlines.
+- Add "📌 Helpful Tips" section:
+  - Link bank account with Aadhar.
+  - Keep copies of documents.
+  - Check official portals.
+
+
 """
 
 # Logging configuration
